@@ -37,83 +37,87 @@
         <h2 class="feedback__title">Оставьте свой отзыв</h2>
         <p class="feedback__description">Помогите нашим отелям стать лучше!
           Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-        <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
+        <form class="form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="form__fieldset">
             <legend class="form__legend">Представьтесь:</legend>
-            <p class="feedback__form--item">
-              <label for="feedback__name">Имя*:</label>
-              <input type="text" id="feedback__name" name="name" placeholder="Петр">
-            <p class="feedback__form--item">
-              <label for="feedback__lastname">Фамилия*:</label>
-              <input type="text" id="feedback__lastname" name="lastname" placeholder="Иванов">
+            <p class="form__item">
+              <label for="first_name">Имя*:</label>
+              <input class="form__input" type="text" id="first_name" name="first_name" placeholder="Петр" required>
+            <p class="form__item">
+              <label for="last_name">Фамилия*:</label>
+              <input class="form__input" type="text" id="last_name" name="last_name" placeholder="Иванов" required>
             </p>
-            <p class="feedback__form--item">
-              <label for="feedback__middle-name">Отчество*:</label>
-              <input  type="text" id="feedback__middle-name" name="middle_name" placeholder="Александрович">
+            <p class="form__item">
+              <label for="middle_name">Отчество*:</label>
+              <input class="form__input"  type="text" id="middle_name" name="middle_name" placeholder="Александрович" required>
             </p>
           </fieldset>
+
           <fieldset class="form__fieldset">
             <legend class="form__legend">Контактная информация:</legend>
-            <p class="feedback__form--item">
-              <label for="feedback__phone-number">Контактный телефон*:</label>
-              <input class="phone-number__icon--user" type="text" id="feedback__phone-number" name="phone-number"
-                placeholder="Введите телефон">
-            <p class="feedback__form--item">
-              <label for="feedback__e-mail">Электронная почта*:</label>
-              <input class="e-mail__icon--user" type="email" id="feedback__e-mail" name="e-mail"
-                placeholder="Введите e-mail">
+            <p class="form__item">
+              <label for="phonenumber">Контактный телефон*:</label>
+              <input class="form__input form__input--phonenumber" type="text" id="phonenumber" name="phone_number"
+                placeholder="Введите телефон" required>
+            <p class="form__item">
+              <label for="email">Электронная почта*:</label>
+              <input class="form__input form__input--email" type="email" id="email" name="email"
+                placeholder="Введите e-mail" required>
             </p>
           </fieldset>
+
           <fieldset class="form__fieldset">
-            <legend class="form__legend">Ваше Общее впечатление:</legend>
+            <legend class="form__legend">Ваше общее впечатление:</legend>
             <ul class="form__filter--list">
-              <li class="filter__option">
-                <input class="visually-hiden filter__input filter__input--radio" type="radio"
+              <li class="form__filter--option">
+                <input class="visually-hidden filter__input filter__input--radio" type="radio"
                   id="rather_positive" value="positive" name="impression_choice" checked>
                 <label for="rather_positive">Скорее положительное</label>
               </li>
-              <li class="filter__option">
-                <input class="visually-hiden filter__input filter__input--radio" type="radio"
+              <li class="form__filter--option">
+                <input class="visually-hidden filter__input filter__input--radio" type="radio"
                   id="rather_negative" value="rather_positive" name="impression_choice">
                 <label for="rather_negative">Скорее отрицательное</label>
               </li>
-              <li class="filter__option">
-                <input class="visually-hiden filter__input filter__input--radio" type="radio"
+              <li class="form__filter--option">
+                <input class="visually-hidden filter__input filter__input--radio" type="radio"
                   id="hard_to_answer" value="hard_to_answer" name="impression_choice">
                 <label for="hard_to_answer">Затрудняюсь ответить</label>
               </li>
             </ul>
           </fieldset>
+
           <fieldset class="form__fieldset">
             <legend class="form__legend">Посещенные достопримечательности:</legend>
               <ul class="form__filter--list">
-                <li class="filter__option">
-                  <input class="visually-hiden filter__input filter__input--checkbox" type="checkbox"
+                <li class="form__filter--option">
+                  <input class="visually-hidden filter__input filter__input--checkbox" type="checkbox"
                     id="devil_bridge" value="devil_bridge" name="visit_sights" checked>
                   <label for="devil_bridge">Мост Дьявола</label>
                 </li>
-                <li class="filter__option">
-                  <input class="visually-hiden filter__input filter__input--checkbox" type="checkbox"
+                <li class="form__filter--option">
+                  <input class="visually-hidden filter__input filter__input--checkbox" type="checkbox"
                     id="bell_mountain" value="bell_mountain" name="visit_sights" checked>
                   <label for="bell_mountain">Гора-Колокол</label>
                 </li>
-                <li class="filter__option">
-                  <input class="visually-hiden filter__input filter__input--checkbox" type="checkbox"
+                <li class="form__filter--option">
+                  <input class="visually-hidden filter__input filter__input--checkbox" type="checkbox"
                     id="slide_park" value="slide_park" name="visit_sights" checked>
                   <label for="slide_park">Слайд-парк</label>
                 </li>
-                <li class="filter__option">
-                  <input class="visually-hiden filter__input filter__input--checkbox" type="checkbox"
+                <li class="form__filter--option">
+                  <input class="visually-hidden filter__input filter__input--checkbox" type="checkbox"
                     id="red_rocks" value="red_rocks" name="visit_sights">
                   <label for="red_rocks">Красные скалы</label>
                 </li>
               </ul>
           </fieldset>
+
           <fieldset class="form__fieldset">
             <legend class="form__legend">Опишите свои эмоции:</legend>
-            <textarea name="emotions" cols="35" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+            <textarea name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
-          <button class="feedback__form--button" type="submit">Отправить отзыв</button>
+          <button class="form__button" type="submit">Отправить отзыв</button>
         </form>
       </section>
 
@@ -127,13 +131,13 @@
 
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link social__link--twitter" href="#">Our twitter</a>
+          <a class="social__link social__link--twitter" href="#">Мы в Твиттере</a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook" href="#">Our facebook</a>
+          <a class="social__link social__link--facebook" href="#">Мы в фейсбуке</a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--youtube" href="#">Our youtube channel</a>
+          <a class="social__link social__link--youtube" href="#">Наш Ютуб-канал</a>
         </li>
       </ul>
 
