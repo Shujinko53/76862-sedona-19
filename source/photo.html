@@ -9,17 +9,15 @@
     <header class="page-header">
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="site-list__item">
-              <a href="index.html">Главная</a>
-              <button class="site-list__close-button">Закрыть меню</button>
-            </li>
-            <li class="site-list__item"><a href="#">Фото и видео</a></li>
-            <li class="site-list__item"><a href="form.html">Форма отзыва</a></li>
-            <li class="site-list__item"><a href="https://htmlacademy.ru">HTML academy</a></li>
-          </ul>
-        </div>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a href="index.html">Главная</a>
+            <button class="site-list__item-button site-list__item-button--close-button">Закрыть меню</button>
+          </li>
+          <li class="site-list__item"><a href="#">Фото и видео</a></li>
+          <li class="site-list__item"><a href="form.html">Форма отзыва</a></li>
+          <li class="site-list__item"><a href="https://htmlacademy.ru">HTML academy</a></li>
+        </ul>
       </nav>
       <a class="page-header__logo">
         <img class="page-header__logo-image" src="img/logotype_mobile.svg"
@@ -42,45 +40,60 @@
           Фотографии помогут вам забыть о политике и экономике.</p>
         <ul class="blog__list">
           <li class="blog__item">
-            <img class="blog__item--image" src="img/nature.jpg" width="280" height="280" alt="Неродные просторы">
-            <b class="blog__item--title">Неродные просторы</b>
-            <small class="blog__item--author">Автор фото: Борис</small>
-            <div class="blog__item--stats">
-              <button class="stats__like" type="button"></button>
+            <img class="blog__item-image" src="img/nature.jpg" width="280" height="280" alt="Неродные просторы">
+            <b class="blog__item-title">Неродные просторы</b>
+            <small class="blog__item-author">Автор фото: Борис</small>
+            <div class="blog__item-stats">
+              <button class="blog__item-stats__like" type="button"></button>
               <span class="likes-number">1350</span>
             </div>
           </li>
           <li class="blog__item">
-            <img class="blog__item--image" src="img/local_flora.jpg" width="280" height="280" alt="Местная растительность">
-            <b class="blog__item--title">Местная растительность</b>
-            <small class="blog__item--author">Автор фото: Сергей</small>
-            <div class="blog__item--stats">
-              <button class="stats__like" type="button">
-                <span class="likes-number">143</span>
-              </button>
+            <img class="blog__item-image" src="img/local_flora.jpg" width="280" height="280" alt="Местная растительность">
+            <b class="blog__item-title">Местная растительность</b>
+            <small class="blog__item-author">Автор фото: Сергей</small>
+            <div class="blog__item-stats">
+              <button class="blog__item-stats__like" type="button"></button>
+              <span class="likes-number">1350</span>
             </div>
           </li>
           <li class="blog__item">
-            <img class="blog__item--image" src="img/road_to_the_North.jpg" width="280" height="280" alt="Дорога на север">
-            <b class="blog__item--title">Дорога на север</b>
-            <small class="blog__item--author">Автор фото: Петр</small>
-            <div class="blog__item--stats">
-              <button class="stats__like" type="button">
-                <span class="likes-number">96</span>
-              </button>
+            <img class="blog__item-image" src="img/road_to_the_North.jpg" width="280" height="280" alt="Дорога на север">
+            <b class="blog__item-title">Дорога на север</b>
+            <small class="blog__item-author">Автор фото: Петр</small>
+            <div class="blog__item-stats">
+              <button class="blog__item-stats__like" type="button"></button>
+              <span class="likes-number">1350</span>
             </div>
           </li>
           <li class="blog__item">
-            <img class="blog__item--image" src="img/devil_bridge_small.jpg" width="280" height="280" alt="Мост дьявола">
-            <b class="blog__item--title">Мост дьявола</b>
-            <small class="blog__item--author">Автор фото: Антон</small>
-            <div class="blog__item--stats">
-              <button class="stats__like" type="button">
-                <span class="likes-number">254</span>
-              </button>
+            <img class="blog__item-image" src="img/devil_bridge_small.jpg" width="280" height="280" alt="Мост дьявола">
+            <b class="blog__item-title">Мост дьявола</b>
+            <small class="blog__item-author">Автор фото: Антон</small>
+            <div class="blog__item-stats">
+              <button class="blog__item-stats__like" type="button"></button>
+              <span class="likes-number">1350</span>
             </div>
           </li>
         </ul>
+      </section>
+
+      <section class="presentation">
+        <b class="presentation__title">Всё еще сомневаетесь?</b>
+        <p class="presentation__description">Смотрите видеопрезентацию и скорее за билетами,
+          пока они не подорожали в очередной раз!</p>
+        <video class="presentation__video" src="https://via.placeholder.com" width="321" height="201"></video>
+        <div class="range-filter">
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar"></div>
+            </div>
+            <button class="video-toggle" type="button" aria-label="Перемотать видео"></button>
+          </div>
+          <button class="presentation__option" type="button" aria-label="Перемотать в начало"></button>
+          <button class="presentation__option" type="button" aria-label="Субтитры"></button>
+          <button class="presentation__option" type="button" aria-label="На весь экран"></button>
+        </div>
       </section>
 
     </main>
@@ -88,25 +101,25 @@
     <footer class="page-footer">
 
       <div class="page-footer__visit visit-sedona">
-        <p class="visit__sedona--hashtag">#visitsedona</p>
+        <p class="visit-sedona__hashtag">#visitsedona</p>
       </div>
 
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link--twitter" href="#">Our twitter</a>
+      <ul class="page-footer__social social-list">
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--twitter" href="#">Мы в Твиттере</a>
         </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="#">Our facebook</a>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--facebook" href="#">Мы в фейсбуке</a>
         </li>
-        <li class="social__item">
-          <a class="social__link social__link--youtube" href="#">Our youtube channel</a>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--youtube" href="#">Наш Ютуб-канал</a>
         </li>
       </ul>
 
       <div class="page-footer__copyright copyright">
         <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/19">
-          <b class="copyright__link--text">Разработано</b>
-          <img class="copyright__link--image" src="img/htmlacademy_black.svg" width="27" height="34" alt="Логотип HTML Academy">
+          <b class="copyright__link-title">Разработано</b>
+          <img class="copyright__link-image" src="img/htmlacademy_black.svg" width="27" height="34" alt="Логотип HTML Academy">
         </a>
       </div>
 
