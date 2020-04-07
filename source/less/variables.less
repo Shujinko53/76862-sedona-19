@@ -1,10 +1,17 @@
+@tablet-width: 768px;
+@desktop-width: 1200px;
 @bg-blue: #81b3d2;
 @bg-blue-hover: #669ec0;
 @bg-blue-active: #5496bd;
 @bg-grey: #eeeeee;
 @bg-disabled: #e5e5e5;
-@tablet-width: 768px;
-@desktop-width: 1200px;
+
+.mobile-page-style (@width, @margin, @text-align) {
+  width: @width;
+  margin: @margin;
+
+  text-align: @text-align;
+}
 
 .list-style (@margin, @padding, @list-style) {
   margin: @margin;
