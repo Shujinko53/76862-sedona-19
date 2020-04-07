@@ -5,8 +5,6 @@
 }
 
 .main-nav {
-  .mobile-page-style (320px, 0 auto, center);
-
   position: relative;
 }
 
@@ -35,7 +33,12 @@
 
   border: none;
 
+  outline: none;
   cursor: pointer;
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &::before,
   &::after {
@@ -57,18 +60,6 @@
 
   &::after {
     transform: rotate(-45deg);
-  }
-
-  &:hover::before,
-  &:focus::before,
-  &:hover::after,
-  &:focus::after {
-    background-color: #cde1ed;
-  }
-
-  &:active::before,
-  &:active::after {
-    background-color: #a7cae0;
   }
 }
 
@@ -124,7 +115,12 @@
 
   border: none;
 
+  outline: none;
   cursor: pointer;
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &::before {
     content: "";
@@ -138,17 +134,6 @@
     background-color: @bg-blue;
     box-shadow: 0 9px 0 0 @bg-blue, 0 18px 0 0 @bg-blue;
   }
-
-  &:hover::before,
-  &:focus::before {
-    background-color: #b3d1e4;
-    box-shadow: 0 9px 0 0 #b3d1e4, 0 18px 0 0 #b3d1e4;
-  }
-
-  &:active::before {
-    background-color: #d9e8f1;
-    box-shadow: 0 9px 0 0 #d9e8f1, 0 18px 0 0 #d9e8f1;
-  }
 }
 
 .page-header__logo {
@@ -159,7 +144,7 @@
 
   width: 102px;
   height: 83px;
-  margin-left: -50px;
+  transform: translateX(-50%);
 }
 
 .page-header__main-image {
@@ -168,7 +153,7 @@
   width: 318px;
   height: 389px;
 
-  background-image: url("../../img/bg-back-mobile.jpg");
+  background-image: url("../img/bg-back-mobile.jpg");
   background-repeat: no-repeat;
 
   background-position-x: 50%;
@@ -183,7 +168,7 @@
     width: 320px;
     height: 26px;
 
-    background-image: url("../../img/bg-intro-triangle-mobile.svg");
+    background-image: url("../img/bg-intro-triangle-mobile.svg");
     background-repeat: no-repeat;
   }
 }
@@ -194,7 +179,7 @@
   width: 318px;
   height: 158px;
 
-  background-image: url("../../img/bg-back-mobile.jpg");
+  background-image: url("../img/bg-back-mobile.jpg");
   background-repeat: no-repeat;
 
   background-position: 50% 100%;
@@ -209,7 +194,7 @@
     width: 320px;
     height: 26px;
 
-    background-image: url("../../img/bg-intro-triangle-mobile.svg");
+    background-image: url("../img/bg-intro-triangle-mobile.svg");
     background-repeat: no-repeat;
   }
 }
