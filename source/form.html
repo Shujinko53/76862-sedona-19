@@ -46,7 +46,7 @@
         <p class="feedback__description">Помогите нашим отелям стать лучше!
           Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         <form class="form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="form__fieldset">
+          <fieldset class="form__fieldset form__fieldset--private-info">
             <legend class="form__legend">Представьтесь:</legend>
             <p class="form__item">
               <label for="first_name">Имя*:</label>
@@ -61,71 +61,64 @@
             </p>
           </fieldset>
 
-          <fieldset class="form__fieldset">
+          <fieldset class="form__fieldset form__fieldset--private-info">
             <legend class="form__legend">Контактная информация:</legend>
-            <p class="form__item">
+            <p class="form__item form__item--contacts form__item--contacts-icon icon-phone">
               <label for="phonenumber">Контактный телефон*:</label>
-              <input class="form__input form__input--phonenumber" type="text" id="phonenumber" name="phone_number"
+              <input class="form__input" type="text" id="phonenumber" name="phone_number"
                 placeholder="Введите телефон" required>
-            <p class="form__item">
+            <p class="form__item form__item--contacts form__item--contacts-icon icon-email">
               <label for="email">Электронная почта*:</label>
-              <input class="form__input form__input--email" type="email" id="email" name="email"
+              <input class="form__input" type="email" id="email" name="email"
                 placeholder="Введите e-mail" required>
             </p>
           </fieldset>
 
           <fieldset class="form__fieldset">
-            <legend class="form__legend">Ваше общее впечатление:</legend>
+            <legend class="form__legend filter-radio-legend">Ваше общее впечатление:</legend>
             <ul class="form__filter filter-list">
-              <li class="filter-list__option">
-                <input class="visually-hidden filter-list__input filter-list__input--radio" type="radio"
-                  id="rather_positive" value="positive" name="impression_choice" checked>
+              <li class="filter-list__option filter-list__option-radio">
+                <input class="visually-hidden filter-list__input filter-list__input--radio" type="radio" id="rather_positive" value="positive" name="impression_choice" checked>
                 <label for="rather_positive">Скорее положительное</label>
               </li>
-              <li class="filter-list__option">
-                <input class="visually-hidden filter-list__input filter-list__input--radio" type="radio"
-                  id="rather_negative" value="rather_positive" name="impression_choice">
+              <li class="filter-list__option filter-list__option-radio">
+                <input class="visually-hidden filter-list__input filter-list__input--radio" type="radio" id="rather_negative" value="rather_positive" name="impression_choice">
                 <label for="rather_negative">Скорее отрицательное</label>
               </li>
-              <li class="filter-list__option">
-                <input class="visually-hidden filter-list__input filter-list__input--radio" type="radio"
-                  id="hard_to_answer" value="hard_to_answer" name="impression_choice">
+              <li class="filter-list__option filter-list__option-radio">
+                <input class="visually-hidden filter-list__input filter-list__input--radio" type="radio" id="hard_to_answer" value="hard_to_answer" name="impression_choice">
                 <label for="hard_to_answer">Затрудняюсь ответить</label>
               </li>
             </ul>
           </fieldset>
 
           <fieldset class="form__fieldset">
-            <legend class="form__legend">Посещенные достопримечательности:</legend>
+            <legend class="form__legend filter-checkbox-legend">Посещенные достопримечательности:</legend>
               <ul class="form__filter filter-list">
-                <li class="filter-list__option">
-                  <input class="visually-hidden filter-list__input filter-list__input--checkbox" type="checkbox"
-                    id="devil_bridge" value="devil_bridge" name="visit_sights" checked>
+                <li class="filter-list__option filter-list__option-checkbox">
+                  <input class="visually-hidden filter-list__input filter-list__input--checkbox" type="checkbox" id="devil_bridge" value="devil_bridge" name="visit_sights" checked>
                   <label for="devil_bridge">Мост Дьявола</label>
                 </li>
-                <li class="filter-list__option">
-                  <input class="visually-hidden filter-list__input filter-list__input--checkbox" type="checkbox"
-                    id="bell_mountain" value="bell_mountain" name="visit_sights" checked>
+                <li class="filter-list__option filter-list__option-checkbox">
+                  <input class="visually-hidden filter-list__input filter-list__input--checkbox" type="checkbox" id="bell_mountain" value="bell_mountain" name="visit_sights" checked>
                   <label for="bell_mountain">Гора-Колокол</label>
                 </li>
-                <li class="filter-list__option">
-                  <input class="visually-hidden filter-list__input filter-list__input--checkbox" type="checkbox"
-                    id="slide_park" value="slide_park" name="visit_sights" checked>
+                <li class="filter-list__option filter-list__option-checkbox">
+                  <input class="visually-hidden filter-list__input filter-list__input--checkbox" type="checkbox" id="slide_park" value="slide_park" name="visit_sights" checked>
                   <label for="slide_park">Слайд-парк</label>
                 </li>
-                <li class="filter-list__option">
-                  <input class="visually-hidden filter-list__input filter-list__input--checkbox" type="checkbox"
-                    id="red_rocks" value="red_rocks" name="visit_sights">
+                <li class="filter-list__option filter-list__option-checkbox">
+                  <input class="visually-hidden filter-list__input filter-list__input--checkbox" type="checkbox" id="red_rocks" value="red_rocks" name="visit_sights">
                   <label for="red_rocks">Красные скалы</label>
                 </li>
               </ul>
           </fieldset>
 
-          <fieldset class="form__fieldset emotion">
+          <fieldset class="form__fieldset form__fieldset-emotion">
             <legend class="form__legend">Опишите свои эмоции:</legend>
             <textarea name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
-          <button class="form__button" type="submit">Отправить отзыв</button>
+          <button class="form__button button" type="submit">Отправить отзыв</button>
         </form>
 
       </section>
