@@ -31,7 +31,7 @@
 
   border: none;
 
-  &:not(.form__fieldset-emotion) {
+  &:not(:last-of-type) {
     border-bottom: 1px solid #e5e5e5;
   }
 }
@@ -73,6 +73,10 @@
   &:not(:last-child) {
     margin-bottom: 20px;
   }
+}
+
+.form__item--contacts:not(:last-child) {
+  margin-bottom: 14px;
 }
 
 .form__item--contacts-icon::before {
@@ -244,6 +248,7 @@
   height: 160px;
 
   font: inherit;
+  font-weight: 700;
   color: #000000;
 
   background-color: #f2f2f2;
