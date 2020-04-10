@@ -2,12 +2,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 35px;
-  padding-bottom: 32px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+.inner-footer {
+  padding-top: 25px;
+
+  transform: translateX(-1px); /* Pixelperfect */
 }
 
 .page-footer__visit {
-  padding-bottom: 35px;
+  padding-bottom: 36px;
 }
 
 .visit-sedona__hashtag {
@@ -21,7 +27,7 @@
   width: 151px;
   margin: 0;
   padding: 0;
-  padding-bottom: 40px;
+  padding-bottom: 43px;
 
   list-style: none;
 }
@@ -31,6 +37,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  width: 151px;
 }
 
 .social-list__link {
@@ -38,7 +45,7 @@
 
   display: block;
   width: 46px;
-  height: 46px;
+  height: 48px;
 
   background-color: #81b3d2;
   background-repeat: no-repeat;
@@ -49,26 +56,41 @@
   }
 
   &:active {
-    color: rgba(253, 253, 253, 0.3);
-
     background-color: #5496bd;
-  }
 
-  &--twitter {
-    background-image: url("../img/icon-twitter.svg");
-  }
-
-  &--facebook {
-    background-image: url("../img/icon-facebook.svg");
-  }
-
-  &--youtube {
-    background-image: url("../img/icon-youtube.svg");
+    .social-icon {
+      opacity: 0.3;
+    }
   }
 }
 
+.social-icon {
+  position: absolute;
+
+  fill: #ffffff;
+}
+
+.icon-twitter {
+  top: 16px;
+  left: 14.5px;
+}
+
+.icon-facebook {
+  top: 14px;
+  left: 18px;
+}
+
+.icon-youtube {
+  top: 16px;
+  left: 13px;
+}
+
 .copyright__link {
+  position: relative;
+
+  width: 130px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   color: #000000;
 
@@ -76,13 +98,25 @@
 }
 
 .copyright__link-title {
-  margin-right: 10px;
-
   font-size: 14px;
   font-weight: 400;
+
+  font-kerning: none; /* Pixelperfect */
 }
 
 .copyright__link-image {
+  position: absolute;
+  bottom: -8px;
+  right: -6px;
+
   width: 41px;
-  height: 41px;
+  height: 40px;
+
+  &:hover {
+    fill: @bg-blue;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
