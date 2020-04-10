@@ -2,6 +2,9 @@ let navMain = document.querySelector('.main-nav');
 let navCloseButton = document.querySelector('.site-list__item-button--close-button');
 let navToggle = document.querySelector('.main-nav__toggle');
 
+navMain.classList.remove('main-nav--nojs');
+navMain.classList.add('main-nav--closed');
+
 navCloseButton.addEventListener('click', function() {
   if (navMain.classList.contains('main-nav--opened')) {
     navMain.classList.remove('main-nav--opened');
