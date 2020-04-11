@@ -1,9 +1,10 @@
-// .search {
-//   .mobile-page-style(320px, 0 auto, center);
-// }
-
 .search-wrapper {
-  padding: 30px;
+  padding-top: 25px;
+  padding-right: 20px;
+  padding-bottom: 23px;
+  padding-left: 20px;
+
+  font-kerning: none; /* Pixelperfect */
 }
 
 .search__title {
@@ -16,7 +17,7 @@
 .search__description {
   margin: 0;
   padding: 0;
-  padding-bottom: 40px;
+  padding-bottom: 34px;
 
   font-size: 14px;
   line-height: 24px;
@@ -25,16 +26,14 @@
 }
 
 .search__link {
-  display: block;
-  padding-top: 15px;
-  padding-right: 35px;
-  padding-bottom: 17px;
-  padding-left: 35px;
+  .button;
+}
 
-  font-size: 21px;
-  font-weight: 700;
-  color: #ffffff;
-  text-decoration: none;
+.search__map {
+  margin: 0;
+}
 
-  background-color: @bg-blue;
+.search__map iframe {
+  background-color: rgb(235, 230, 217);
+  border: none;
 }

@@ -1,5 +1,7 @@
 .features__list {
   .list-style (0, 0, none);
+
+  font-kerning: none; /* Pixelperfect */
 }
 
 .features__item {
@@ -18,17 +20,18 @@
 
 .features__item-content {
   padding-top: 40px;
-  padding-bottom: 42px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  padding-left: 20px;
 }
 
 .features__title {
-  display: block;
   margin: 0;
-  padding-bottom: 19px;
+  padding-bottom: 9px;
 }
 
 .features__number {
-  padding-bottom: 21px;
+  padding-bottom: 15px;
 }
 
 .features__list p {
@@ -52,8 +55,10 @@
 .features__item--grey {
   position: relative;
 
-  padding-left: 35px;
+  padding-top: 25px;
   padding-right: 35px;
+  padding-bottom: 30px;
+  padding-left: 35px;
 
   background-color: @bg-grey;
 }

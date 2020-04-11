@@ -1,11 +1,12 @@
 .feedback {
-  padding-top: 40px;
+  padding-top: 39px;
+
+  font-kerning: none; /* Pixelperfect */
 }
 
 .feedback__title {
-  display: block;
   margin: 0;
-  padding-bottom: 30px;
+  padding-bottom: 26px;
 
   font-weight: 700;
 }
@@ -26,10 +27,272 @@
 
 .form__fieldset {
   padding: 0;
+  padding-right: 20px;
+  padding-bottom: 25px;
+  padding-left: 20px;
 
   border: none;
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid #e5e5e5;
+  }
 }
 
-.form__fieldset:not(.emotion) {
-  border-bottom: 1px solid #e5e5e5;
+.form__fieldset--contact-info {
+  padding-top: 0;
+  padding-bottom: 28px;
+}
+
+.emotions-fieldset {
+  margin-bottom: 19px;
+}
+
+.form__legend {
+  padding: 0;
+  padding-top: 16px;
+  margin-bottom: 21px;
+
+  font-weight: 700;
+
+  transform: translateX(-3px);
+}
+
+.form__legend--contact {
+  padding-top: 20px;
+  margin-bottom: 21px;
+}
+
+.filter-radio-legend {
+  padding-bottom: 17px;
+}
+
+.filter-checkbox-legend {
+  padding-bottom: 10px;
+}
+
+.filter-emotions-legend {
+  padding-top: 14px;
+  margin-bottom: 17px;
+}
+
+.form__item {
+  position: relative;
+
+  width: 280px;
+  margin: 0;
+
+  text-align: left;
+}
+
+.form__item-name {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 23px;
+  }
+}
+
+.form__item--contacts:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.form__item--contacts-icon::before {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  right: 2px;
+  z-index: 1;
+
+  width: 58px;
+  height: 58px;
+
+  background-color: #e6e6e6;
+  background-position: 21px 20px;
+  background-repeat: no-repeat;
+}
+
+.icon-phone::before {
+  background-image: url("../img/icon-phone.svg");
+}
+
+.icon-email::before {
+  background-image: url("../img/icon-mail.svg");
+}
+
+.form__item label {
+  margin-right: 12px;
+  font-size: 14px;
+  color: #333333;
+}
+
+.form__item--contacts label {
+  display: block;
+  margin-left: 22px;
+  margin-bottom: 6px;
+}
+
+.form__input {
+  position: relative;
+
+  padding-top: 16px;
+  padding-right: 57px;
+  padding-bottom: 16px;
+  padding-left: 20px;
+
+  font: inherit;
+  font-weight: 700;
+
+  background-color: #f2f2f2;
+  background-repeat: no-repeat;
+
+  border: none;
+
+  outline: none;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:focus,
+  &:active {
+    background-color: #ffffff;
+    outline: 3px solid #e5e5e5;
+  }
+}
+
+.form__input::placeholder {
+  color: #000000;
+}
+
+.form__input-name {
+  flex-grow: 1;
+  width: 160px;
+  padding-top: 15px;
+  padding-right: 16px;
+  padding-bottom: 14px;
+  padding-left: 20px;
+
+  box-sizing: border-box;
+}
+
+.form__filter {
+  .list-style (0, 0, none);
+}
+
+.form__filter label {
+  font-weight: 700;
+  text-transform: none;
+}
+
+/*  -----  Фильтры  -----  */
+
+.filter-list {
+  text-align: left;
+}
+
+.filter-list__option {
+  width: 280px;
+
+  &:not(:last-child) {
+    margin-bottom: 43px;
+  }
+
+  &:last-child {
+    margin-bottom: 20px;
+  }
+}
+
+.filter-list .filter-list__option-checkbox:not(:last-child) {
+  margin-bottom: 54px;
+}
+
+.filter-list__option label {
+  position: relative;
+
+  padding-left: 78px;
+}
+
+.filter-list__input + label::before {
+  content: "";
+
+  position: absolute;
+  top: -15px;
+  left: -2px;
+
+  width: 56px;
+  height: 56px;
+
+  background-color: #f2f2f2;
+}
+
+.filter-list__input--radio + label::before {
+  border-radius: 50%;
+}
+
+.filter-list__input--checkbox + label::before {
+  border-radius: 10%;
+}
+
+.filter-list__input--radio:checked + label::after {
+  content: "";
+
+  position: absolute;
+  top: 2px;
+  left: 15px;
+
+  width: 22px;
+  height: 22px;
+
+  background-color: #333333;
+
+  border-radius: 50%;
+}
+
+.filter-list__input--checkbox:checked + label::after {
+  content: "";
+
+  position: absolute;
+  top: 6px;
+  left: 15px;
+
+  width: 24px;
+  height: 16px;
+
+  background-image: url("../img/tick.svg");
+  background-repeat: no-repeat;
+}
+
+.form__fieldset textarea {
+  padding-top: 16px;
+  padding-right: 18px;
+  padding-bottom: 13px;
+  padding-left: 21px;
+  width: 280px;
+  height: 160px;
+
+  font: inherit;
+  font-weight: 700;
+  color: #000000;
+
+  background-color: #f2f2f2;
+  border: none;
+  box-sizing: border-box;
+
+  transform: translateX(-3px);
+
+  &::placeholder {
+    font-weight: 700;
+    color: #000000;
+  }
+}
+
+.form__button {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 48px;
+
+  transform: translateX(-1px);
 }

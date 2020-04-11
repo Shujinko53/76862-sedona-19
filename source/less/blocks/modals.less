@@ -1,0 +1,85 @@
+.modal {
+  .mobile-page-style;
+
+  position: fixed;
+  left: 50%;
+  z-index: 5;
+
+  display: none;
+
+  font-kerning: none; /* Pixelperfect */
+
+  background-color: #ffffff;
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+
+  transform: translateX(-50%);
+}
+
+.modal__failure {
+  top: 25%;
+}
+
+.modal__success {
+  top: 57%;
+}
+
+.modal__block {
+  padding-right: 42px;
+  padding-left: 42px;
+}
+
+.modal__success-block {
+  margin-bottom: 34px;
+  padding-top: 47px;
+}
+
+.modal__failure-block {
+  margin-bottom: 23px;
+  padding-top: 42px;
+}
+
+.modal__title {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.modal__description {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 24px;
+  color: #333333;
+}
+
+.modal__success-close {
+  width: 280px;
+  padding: 20px;
+
+  background-color: #f2f2f2;
+}
+
+.modal__failure-close {
+  padding-bottom: 35px;
+}
+
+.modal__button {
+  .button;
+
+  margin: 0 auto;
+
+  font-size: 18px;
+
+  cursor: pointer;
+}
+
+.modal__success-button {
+  width: 280px;
+}
+
+.modal__failure-button {
+  width: 180px;
+}
+
+.modal-show {
+  display: block;
+}
