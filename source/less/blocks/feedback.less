@@ -26,10 +26,7 @@
 }
 
 .form__fieldset {
-  padding: 0;
-  padding-right: 20px;
-  padding-bottom: 25px;
-  padding-left: 20px;
+  padding: 0 20px 25px 20px;
 
   border: none;
 
@@ -48,9 +45,8 @@
 }
 
 .form__legend {
-  padding: 0;
-  padding-top: 16px;
   margin-bottom: 21px;
+  padding: 16px 0 0 0;
 
   font-weight: 700;
 
@@ -58,8 +54,8 @@
 }
 
 .form__legend--contact {
-  padding-top: 20px;
   margin-bottom: 21px;
+  padding-top: 20px;
 }
 
 .filter-radio-legend {
@@ -71,8 +67,8 @@
 }
 
 .filter-emotions-legend {
-  padding-top: 14px;
   margin-bottom: 17px;
+  padding-top: 14px;
 }
 
 .form__item {
@@ -103,7 +99,7 @@
 
   position: absolute;
   bottom: 0;
-  right: 2px;
+  right: 0;
   z-index: 1;
 
   width: 58px;
@@ -116,10 +112,12 @@
 
 .icon-phone::before {
   background-image: url("../img/icon-phone.svg");
+  background-position: 19px;
 }
 
 .icon-email::before {
   background-image: url("../img/icon-mail.svg");
+  background-position: 19px 20px;
 }
 
 .form__item label {
@@ -137,10 +135,8 @@
 .form__input {
   position: relative;
 
-  padding-top: 16px;
-  padding-right: 57px;
-  padding-bottom: 16px;
-  padding-left: 20px;
+  width: 100%;
+  padding: 16px 65px 16px 20px;
 
   font: inherit;
   font-weight: 700;
@@ -149,6 +145,7 @@
   background-repeat: no-repeat;
 
   border: none;
+  box-sizing: border-box;
 
   outline: none;
 
@@ -170,10 +167,7 @@
 .form__input-name {
   flex-grow: 1;
   width: 160px;
-  padding-top: 15px;
-  padding-right: 16px;
-  padding-bottom: 14px;
-  padding-left: 20px;
+  padding: 15px 16px 14px 20px;
 
   box-sizing: border-box;
 }
@@ -212,7 +206,7 @@
 .filter-list__option label {
   position: relative;
 
-  padding-left: 78px;
+  padding-left: 77px;
 }
 
 .filter-list__input + label::before {
@@ -266,12 +260,9 @@
 }
 
 .form__fieldset textarea {
-  padding-top: 16px;
-  padding-right: 18px;
-  padding-bottom: 13px;
-  padding-left: 21px;
   width: 280px;
   height: 160px;
+  padding: 16px 18px 13px 21px;
 
   font: inherit;
   font-weight: 700;
