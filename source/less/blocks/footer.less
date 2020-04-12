@@ -118,3 +118,41 @@
     opacity: 0.3;
   }
 }
+
+/* ---------- Планшетная версия ---------- */
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 648px;
+    margin: 0 auto;
+    padding: 36px 5% 36px 5%;
+  }
+
+  .page-footer__visit {
+    padding-bottom: 0;
+  }
+
+  .page-footer__social {
+    padding: 0;
+  }
+}
+
+/* ---------- Десктопная версия ---------- */
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    width: 1200px;
+    padding: 36px 5% 36px 5%;
+    box-sizing: border-box;
+  }
+
+  .page-footer__visit {
+    padding-bottom: 0;
+  }
+
+  .page-footer__social {
+    padding: 0;
+  }
+}
