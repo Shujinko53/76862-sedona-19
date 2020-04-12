@@ -37,3 +37,19 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+@media (min-width: @tablet-width) {
+  .page-main,
+  .page-photo,
+  .page-form {
+    .tablet-page-style;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main,
+  .page-photo,
+  .page-form {
+    .desktop-page-style;
+  }
+}
