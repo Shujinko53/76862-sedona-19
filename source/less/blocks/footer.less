@@ -35,7 +35,6 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  width: 151px;
 }
 
 .social-list__link {
@@ -127,7 +126,7 @@
     justify-content: space-between;
     width: 648px;
     margin: 0 auto;
-    padding: 36px 5% 36px 5%;
+    padding: 29px 5% 36px 5%;
   }
 
   .page-footer__visit {
@@ -137,6 +136,15 @@
   .page-footer__social {
     padding: 0;
   }
+
+  .social-list {
+    transform: translateX(-3px); /* Pixelperfect */
+  }
+
+  .copyright__link-image {
+    bottom: -7px;
+    right: -8px;
+  }
 }
 
 /* ---------- Десктопная версия ---------- */
@@ -144,7 +152,8 @@
 @media (min-width: @desktop-width) {
   .page-footer {
     width: 1200px;
-    padding: 36px 5% 36px 5%;
+    padding: 29px 9.4% 35px 9.4%;
+
     box-sizing: border-box;
   }
 
