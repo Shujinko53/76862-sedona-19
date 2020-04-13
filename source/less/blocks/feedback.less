@@ -40,7 +40,7 @@
   padding-bottom: 28px;
 }
 
-.emotions-fieldset {
+.form__fieldset--emotions {
   margin-bottom: 19px;
 }
 
@@ -307,11 +307,14 @@
     border-top: none;
   }
 
-  .form__fieldset:nth-child(2n-1) {
+  .form__fieldset--name-info,
+  .form__fieldset--impression {
     width: 50%;
   }
 
-  .form__fieldset:nth-child(2n) {
+  .form__fieldset--contact-info,
+  .form__fieldset-sights,
+  .form__fieldset--emotions {
     width: 100%;
   }
 
@@ -352,6 +355,10 @@
     }
   }
 
+  .form__fieldset--emotions textarea {
+    width: 100%;
+  }
+
 }
 
 /* ---------- Десктопная версия ---------- */
@@ -363,5 +370,22 @@
 
   .feedback__description {
     padding: 0 26% 19px 27%;
+  }
+
+  .form__filter--sights {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .filter-list__option {
+    width: 205px;
+
+    &:not(:last-child) {
+      margin-bottom: 43px;
+    }
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
   }
 }
