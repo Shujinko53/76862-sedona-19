@@ -5,7 +5,7 @@
 }
 
 .search__title {
-  display: block;
+  margin: 0;
   padding-bottom: 20px;
 
   font-size: 21px;
@@ -32,4 +32,25 @@
 .search__map iframe {
   background-color: rgb(235, 230, 217);
   border: none;
+}
+/* ---------- Планшетная версия ---------- */
+
+@media (min-width: @tablet-width) {
+  .search-wrapper {
+    padding: 45px 20% 45px 20%;
+  }
+
+  .search__title {
+    padding-bottom: 20px;
+
+    font-size: 30px;
+  }
+}
+
+/* ---------- Десктопная версия ---------- */
+
+@media (min-width: @desktop-width) {
+  .search-wrapper {
+    padding: 45px 31% 45px 31%;
+  }
 }

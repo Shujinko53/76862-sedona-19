@@ -112,6 +112,34 @@
   .bridge-image {
     background-image: url("../img/main-bridge-tablet.jpg");
   }
+
+  .features__item--grey {
+    width: 256px;
+    padding: 25px 40px 30px 40px;
+
+    background-color: @bg-grey;
+
+    box-sizing: border-box;
+  }
+
+  .features__item--grey:not(:last-child)::before {
+    content: none;
+  }
+
+  .features__list-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .features__title {
+    padding-left: 19px;
+    padding-right: 19px;
+  }
+
+  .features__title--blue {
+    padding-right: 21px;
+    padding-left: 21px;
+  }
 }
 
 /* ---------- Десктопная версия ---------- */
@@ -137,5 +165,15 @@
 
   .bridge-image {
     background-image: url("../img/main-bridge-desktop.jpg");
+  }
+
+  .features__item--grey {
+    width: 400px;
+    padding: 40px 40px 40px 40px;
+  }
+
+  .features__description--grey {
+    padding-right: 18px;
+    padding-left: 18px;
   }
 }
