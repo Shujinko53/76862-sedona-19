@@ -137,23 +137,26 @@
     flex-wrap: wrap;
     width: 648px;
     margin: 0 auto;
-    padding: 29px 0 50px 0;
+    padding: 66px 0 50px 0;
   }
 
   .presentation__intro {
-    padding-right: 16%;
-    padding-left: 16%;
+    padding: 0 16% 63px 16%;
   }
 
   .presentation__intro-title {
-    padding-bottom: 26px;
+    padding-bottom: 31px;
 
     font-size: 30px;
   }
 
+  .presentation__intro-description {
+    padding-bottom: 10px;
+  }
+
   .presentation__video {
     width: 648px;
-    height: 499px;
+    height: 500px;
 
     background-image: url("../img/video-tablet.jpg");
   }
@@ -169,14 +172,14 @@
     position: relative;
 
     height: 24px;
-    padding: 47px 176px 47px 95px;
+    padding: 46px 166px 47px 95px;
 
     box-sizing: border-box;
   }
 
   .range-controls .video-toggle {
     top: 44px;
-    left: 170px;
+    left: 205px;
     z-index: 2;
 
     width: 10px;
@@ -188,7 +191,7 @@
 
     background-color: transparent;
 
-    transform: translateY(-89px);
+    transform: translateY(-88px);
   }
 
   .video-controls__option .video-icon {
@@ -209,17 +212,14 @@
 @media (min-width: @desktop-width) {
   .presentation {
     width: 800px;
-    padding: 29px 0 50px 0;
+    padding: 70px 0 50px 0;
   }
 
   .presentation__intro {
-    padding-right: 23%;
-    padding-left: 23%;
+    padding: 0 23% 61px 23%;
   }
 
   .presentation__intro-title {
-    padding-bottom: 26px;
-
     font-size: 30px;
   }
 
@@ -242,16 +242,22 @@
     position: relative;
 
     height: 24px;
-    padding: 47px 176px 47px 95px;
+    padding: 46px 168px 48px 90px;
 
     box-sizing: border-box;
   }
 
   .video-controls {
-    padding: 10px 41px 10px 35px;
+    padding: 10px 43px 10px 34px;
 
     background-color: transparent;
+  }
 
-    transform: translateY(-89px);
+  .range-controls .video-toggle {
+    top: 43px;
+    left: 205px;
+
+    width: 9px;
+    height: 9px;
   }
 }
