@@ -26,10 +26,7 @@
 }
 
 .form__fieldset {
-  padding: 0;
-  padding-right: 20px;
-  padding-bottom: 25px;
-  padding-left: 20px;
+  padding: 0 20px 25px 20px;
 
   border: none;
 
@@ -43,14 +40,13 @@
   padding-bottom: 28px;
 }
 
-.emotions-fieldset {
+.form__fieldset--emotions {
   margin-bottom: 19px;
 }
 
 .form__legend {
-  padding: 0;
-  padding-top: 16px;
   margin-bottom: 21px;
+  padding: 16px 0 0 0;
 
   font-weight: 700;
 
@@ -58,8 +54,8 @@
 }
 
 .form__legend--contact {
-  padding-top: 20px;
   margin-bottom: 21px;
+  padding-top: 20px;
 }
 
 .filter-radio-legend {
@@ -71,8 +67,8 @@
 }
 
 .filter-emotions-legend {
-  padding-top: 14px;
   margin-bottom: 17px;
+  padding-top: 14px;
 }
 
 .form__item {
@@ -103,7 +99,7 @@
 
   position: absolute;
   bottom: 0;
-  right: 2px;
+  right: 0;
   z-index: 1;
 
   width: 58px;
@@ -116,10 +112,12 @@
 
 .icon-phone::before {
   background-image: url("../img/icon-phone.svg");
+  background-position: 19px;
 }
 
 .icon-email::before {
   background-image: url("../img/icon-mail.svg");
+  background-position: 19px 20px;
 }
 
 .form__item label {
@@ -137,10 +135,8 @@
 .form__input {
   position: relative;
 
-  padding-top: 16px;
-  padding-right: 57px;
-  padding-bottom: 16px;
-  padding-left: 20px;
+  width: 100%;
+  padding: 16px 65px 16px 20px;
 
   font: inherit;
   font-weight: 700;
@@ -149,6 +145,7 @@
   background-repeat: no-repeat;
 
   border: none;
+  box-sizing: border-box;
 
   outline: none;
 
@@ -170,10 +167,7 @@
 .form__input-name {
   flex-grow: 1;
   width: 160px;
-  padding-top: 15px;
-  padding-right: 16px;
-  padding-bottom: 14px;
-  padding-left: 20px;
+  padding: 15px 16px 14px 20px;
 
   box-sizing: border-box;
 }
@@ -212,7 +206,7 @@
 .filter-list__option label {
   position: relative;
 
-  padding-left: 78px;
+  padding-left: 77px;
 }
 
 .filter-list__input + label::before {
@@ -266,12 +260,9 @@
 }
 
 .form__fieldset textarea {
-  padding-top: 16px;
-  padding-right: 18px;
-  padding-bottom: 13px;
-  padding-left: 21px;
   width: 280px;
   height: 160px;
+  padding: 16px 18px 13px 21px;
 
   font: inherit;
   font-weight: 700;
@@ -295,4 +286,144 @@
   margin-bottom: 48px;
 
   transform: translateX(-1px);
+}
+
+/* ---------- Планшетная версия ---------- */
+
+@media (min-width: @tablet-width) {
+  .page-form {
+    width: 648px;
+  }
+
+  .feedback__title {
+    font-size: 30px;
+  }
+
+  .feedback__description {
+    padding: 0 15% 19px 16%;
+  }
+
+  .form {
+    border-top: none;
+  }
+
+  .form__fieldset--name-info,
+  .form__fieldset--impression {
+    width: 50%;
+  }
+
+  .form__fieldset--contact-info,
+  .form__fieldset-sights,
+  .form__fieldset--emotions {
+    width: 100%;
+  }
+
+  .form__legend {
+    position: relative;
+
+    font-size: 21px;
+  }
+
+  .form__legend--contact,
+  .filter-checkbox-legend,
+  .filter-emotions-legend {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .form__legend--contact::before,
+  .filter-checkbox-legend::before,
+  .filter-emotions-legend::before,
+  .form__legend--contact::after,
+  .filter-checkbox-legend::after,
+  .filter-emotions-legend::after {
+    content: "";
+
+    flex-grow: 1;
+    flex-shrink: 0;
+
+    width: 50px;
+    height: 1px;
+
+    background: #dbdbdb;
+  }
+
+  .form__legend--contact::before,
+  .filter-checkbox-legend::before,
+  .filter-emotions-legend::before {
+    margin-right: 58px;
+  }
+
+  .form__legend--contact::after,
+  .filter-checkbox-legend::after,
+  .filter-emotions-legend::after {
+    margin-left: 62px;
+  }
+
+  .form__item {
+    width: 100%;
+  }
+
+  .form__filter--sights {
+    display: flex;
+    flex-wrap: wrap;
+    width: 458px;
+    margin: 0 auto;
+  }
+
+  .form__fieldset {
+    padding: 0 0 25px 0;
+
+    border: none;
+
+    &:not(:last-of-type) {
+      border-bottom: none;
+    }
+  }
+
+  .filter-list__option {
+    width: 229px;
+
+    &:not(:last-child) {
+      margin-bottom: 43px;
+    }
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+
+  .form__fieldset--emotions textarea {
+    width: 100%;
+  }
+}
+
+/* ---------- Десктопная версия ---------- */
+
+@media (min-width: @desktop-width) {
+  .page-form {
+    width: 960px;
+  }
+
+  .feedback__description {
+    padding: 0 26% 19px 27%;
+  }
+
+  .form__filter--sights {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .filter-list__option {
+    width: 205px;
+
+    &:not(:last-child) {
+      margin-bottom: 43px;
+    }
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
 }

@@ -1,6 +1,5 @@
 .presentation {
-  padding-top: 29px;
-  padding-bottom: 50px;
+  padding: 29px 0 50px 0;
 
   text-align: center;
 
@@ -8,8 +7,8 @@
 }
 
 .presentation__intro {
-  padding-left: 35px;
   padding-right: 35px;
+  padding-left: 35px;
 }
 
 .presentation__intro-title {
@@ -19,7 +18,6 @@
 
 .presentation__intro-description {
   margin: 0;
-  padding: 0;
   padding-bottom: 35px;
 
   font-size: 14px;
@@ -27,9 +25,19 @@
   color: #333333;
 }
 
+.presentation__video {
+  margin: 0;
+
+  width: 321px;
+  height: 201px;
+
+  background-image: url("../img/video-mobile.jpg");
+  background-repeat: no-repeat;
+}
+
 .range-filter {
   width: 280px;
-  margin-top: -52px;
+  margin-top: -45px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -38,9 +46,7 @@
   position: relative;
 
   height: 24px;
-  padding-top: 21px;
-  padding-right: 23px;
-  padding-left: 22px;
+  padding: 21px 23px 0 22px;
 
   background-color: rgba(0, 0, 0, 0.6);
 }
@@ -121,4 +127,137 @@
 .video-fullscreen-icon {
   width: 20px;
   height: 20px;
+}
+
+/* ---------- Планшетная версия ---------- */
+
+@media (min-width: @tablet-width) {
+  .presentation {
+    display: flex;
+    flex-wrap: wrap;
+    width: 648px;
+    margin: 0 auto;
+    padding: 66px 0 50px 0;
+  }
+
+  .presentation__intro {
+    padding: 0 16% 63px 16%;
+  }
+
+  .presentation__intro-title {
+    padding-bottom: 31px;
+
+    font-size: 30px;
+  }
+
+  .presentation__intro-description {
+    padding-bottom: 10px;
+  }
+
+  .presentation__video {
+    width: 648px;
+    height: 500px;
+
+    background-image: url("../img/video-tablet.jpg");
+  }
+
+  .range-filter {
+    width: 100%;
+    height: 93px;
+    margin: 0;
+    margin-top: -94px;
+  }
+
+  .range-controls {
+    position: relative;
+
+    height: 24px;
+    padding: 46px 166px 47px 95px;
+
+    box-sizing: border-box;
+  }
+
+  .range-controls .video-toggle {
+    top: 44px;
+    left: 205px;
+    z-index: 2;
+
+    width: 10px;
+    height: 10px;
+  }
+
+  .video-controls {
+    padding: 10px 41px 10px 35px;
+
+    background-color: transparent;
+
+    transform: translateY(-88px);
+  }
+
+  .video-controls__option .video-icon {
+    fill: #ffffff;
+
+    &:hover {
+      fill: rgba(255, 255, 255, 0.6);
+    }
+
+    &:active {
+      fill: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+/* ---------- Десктопная версия ---------- */
+
+@media (min-width: @desktop-width) {
+  .presentation {
+    width: 800px;
+    padding: 70px 0 50px 0;
+  }
+
+  .presentation__intro {
+    padding: 0 23% 61px 23%;
+  }
+
+  .presentation__intro-title {
+    font-size: 30px;
+  }
+
+  .presentation__video {
+
+    width: 800px;
+    height: 500px;
+
+    background-image: url("../img/video-desktop.jpg");
+  }
+
+  .range-filter {
+    width: 100%;
+    height: 93px;
+    margin: 0;
+    margin-top: -94px;
+  }
+
+  .range-controls {
+    position: relative;
+
+    height: 24px;
+    padding: 46px 168px 48px 90px;
+
+    box-sizing: border-box;
+  }
+
+  .video-controls {
+    padding: 10px 43px 10px 34px;
+
+    background-color: transparent;
+  }
+
+  .range-controls .video-toggle {
+    top: 43px;
+    left: 205px;
+
+    width: 9px;
+    height: 9px;
+  }
 }

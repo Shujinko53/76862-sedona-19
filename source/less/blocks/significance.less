@@ -36,3 +36,29 @@
   font-size: 14px;
   color: #333333;
 }
+
+/* ---------- Планшетная версия ---------- */
+
+@media (min-width: @tablet-width) {
+  .significance {
+    padding: 50px 10% 40px 10%;
+  }
+
+  .significance::before {
+    content: none;
+  }
+
+  .significance b {
+    padding-bottom: 28px;
+
+    font-size: 21px;
+  }
+}
+
+/* ---------- Десктопная версия ---------- */
+
+@media (min-width: @desktop-width) {
+  .significance {
+    padding: 50px 25% 40px 25%;
+  }
+}

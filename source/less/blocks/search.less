@@ -1,14 +1,11 @@
 .search-wrapper {
-  padding-top: 25px;
-  padding-right: 20px;
-  padding-bottom: 23px;
-  padding-left: 20px;
+  padding: 25px 20px 23px 20px;
 
   font-kerning: none; /* Pixelperfect */
 }
 
 .search__title {
-  display: block;
+  margin: 0;
   padding-bottom: 20px;
 
   font-size: 21px;
@@ -16,8 +13,7 @@
 
 .search__description {
   margin: 0;
-  padding: 0;
-  padding-bottom: 34px;
+  padding: 0 0 34px 0;
 
   font-size: 14px;
   line-height: 24px;
@@ -36,4 +32,37 @@
 .search__map iframe {
   background-color: rgb(235, 230, 217);
   border: none;
+}
+/* ---------- Планшетная версия ---------- */
+
+@media (min-width: @tablet-width) {
+  .search-wrapper {
+    padding: 55px 20.1% 58px 20.1%;
+  }
+
+  .search__title {
+    padding-bottom: 31px;
+
+    font-size: 30px;
+  }
+
+  .search__description {
+    padding: 0 0 42px 0;
+  }
+
+  .search__map iframe {
+    height: 350px;
+  }
+}
+
+/* ---------- Десктопная версия ---------- */
+
+@media (min-width: @desktop-width) {
+  .search-wrapper {
+    padding: 55px 31% 65px 31%;
+  }
+
+  .search__description {
+    padding: 0 0 47px 0;
+  }
 }

@@ -27,12 +27,29 @@ img {
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
+
+  border: 0;
 
   white-space: nowrap;
 
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main,
+  .page-photo,
+  .page-form {
+    .tablet-page-style;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main,
+  .page-photo,
+  .page-form {
+    .desktop-page-style;
+  }
 }

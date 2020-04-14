@@ -3,10 +3,7 @@
 }
 
 .blog__intro {
-  padding-top: 38px;
-  padding-right: 22px;
-  padding-bottom: 30px;
-  padding-left: 22px;
+  padding: 38px 22px 30px 22px;
 
   font-kerning: none; /* Pixelperfect */
 
@@ -42,22 +39,35 @@
   border-bottom: 1px solid #e5e5e5;
 }
 
-.blog__item-image {
-  margin-bottom: 8px;
+.blog__item .blog__item-image {
+  height: 280px;
+  margin: 0;
+  margin-bottom: 15px;
 }
 
-.flora-image {
-  height: 279px;
+.blog__item .sunset-image {
+  background-image: url("../img/photo-sunset-mobile.jpg");
 }
 
-.road-image {
+.blog__item .flora-image {
   height: 279px;
+
+  background-image: url("../img/photo-cactus-mobile.jpg");
+}
+
+.blog__item .road-image {
+  background-image: url("../img/photo-roads-mobile.jpg");
+}
+
+.blog__item .bridge-image {
+  height: 279px;
+
+  background-image: url("../../img/devil-bridge-small.jpg");
 }
 
 .blog__item-author {
   margin: 0;
-  padding: 0;
-  padding-bottom: 8px;
+  padding: 0 0 8px 0;
 
   text-transform: none;
 }
@@ -71,17 +81,191 @@
   width: 23px;
   height: 21px;
 
-  background-color: #ffffff;
-  background-image: url("../img/icon-like.svg");
-  background-repeat: no-repeat;
+  background-color: transparent;
   border: none;
   outline: none;
 
   cursor: pointer;
 }
 
+.icon-like {
+  fill: #b2b2b2;
+
+  transform: translate(-6px, -2px);
+}
+
 .likes-number {
   padding-left: 14px;
 
   font-weight: 700;
+}
+
+/* ---------- Планшетная версия ---------- */
+
+@media (min-width: @tablet-width) {
+  .blog {
+    width: 648px;
+    margin: 0 auto;
+  }
+
+  .blog__intro {
+    padding: 74px 100px 69px 100px;
+
+    border: none;
+  }
+
+  .blog__intro-title {
+    font-size: 30px;
+
+    padding-bottom: 31px;
+  }
+
+  .blog__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 648px;
+    margin: 0 auto;
+  }
+
+  .blog__item {
+    padding: 0;
+
+    border: none;
+  }
+
+  .blog__item-others {
+    width: 324px;
+
+    &:nth-child(2n+1) {
+      .blog__item-description {
+        background-color: #eaeaea;
+      }
+    }
+  }
+
+  .blog__item .blog__item-image {
+    margin: 0;
+  }
+
+  .blog__item .first-image {
+    width: 648px;
+    height: 400px;
+    background-image: url("../img/photo-sunset-tablet.jpg");
+  }
+
+  .blog__item .others-image {
+    width: 324px;
+    height: 267px;
+  }
+
+  .blog__item .flora-image {
+    background-image: url("../img/photo-cactus-tablet.jpg");
+  }
+
+  .blog__item .road-image {
+    background-image: url("../img/photo-roads-tablet.jpg");
+  }
+
+  .blog__item .bridge-image {
+    background-image: url("../img/photo-bridge-tablet.jpg");
+  }
+
+  .blog__item-description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px 9px 20px;
+
+    background-color: #f2f2f2;
+  }
+
+  .likes-number {
+    padding-left: 9px;
+
+    transform: translateY(-2px);
+  }
+
+  .blog__item-others .blog__item-description {
+    padding: 15px 29px 9px 20px;
+  }
+
+  .blog__item-others .blog__item-description--road {
+    padding-right: 35px;
+  }
+}
+
+/* ---------- Десктопная версия ---------- */
+
+@media (min-width: @desktop-width) {
+  .blog {
+    width: 1200px;
+  }
+
+  .blog__intro {
+    padding: 9.3% 32% 70px 32%;
+  }
+
+  .blog__intro-title {
+    font-size: 30px;
+  }
+
+  .blog__list {
+    width: 1200px;
+  }
+
+  .blog__item {
+    position: relative;
+  }
+
+  .blog__item-first {
+    width: 1200px;
+  }
+
+  .blog__item-others {
+    width: 400px;
+
+    &:nth-child(2n+1) {
+      .blog__item-description {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+
+  .blog__item .first-image {
+    width: 1200px;
+    background-image: url("../img/photo-sunset-desktop.jpg");
+  }
+
+  .blog__item .others-image {
+    width: 400px;
+  }
+
+  .blog__item .flora-image {
+    background-image: url("../img/photo-cactus-desktop.jpg");
+  }
+
+  .blog__item .road-image {
+    background-image: url("../img/photo-roads-desktop.jpg");
+  }
+
+  .blog__item .bridge-image {
+    background-image: url("../img/photo-bridge-desktop.jpg");
+  }
+
+  .blog__item-description {
+    margin-top: -80px;
+    padding: 15px 21px 9px 21px;
+
+    color: #ffffff;
+
+    background-color: rgba(0, 0, 0, 0.3);
+
+    .blog__item-author {
+      color: #ffffff;
+    }
+
+    .icon-like {
+      fill: #ffffff;
+    }
+  }
 }
