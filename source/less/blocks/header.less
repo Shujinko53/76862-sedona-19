@@ -15,8 +15,20 @@
   .list-style (0, 1px 0 56px 0, none);
 }
 
-.site-list li {
+.site-list__item {
   background-color: @bg-blue;
+
+  &:not(:first-child) {
+    border-top: 1px solid #9ac2db;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #678fa8;
+  }
+
+  &:last-child {
+    box-shadow: inset 0 -2px 5px #6d97b1;
+  }
 }
 
 .site-list__item-button {
@@ -64,18 +76,8 @@
   }
 }
 
-.site-list__item {
-  &:not(:first-child) {
-    border-top: 1px solid #9ac2db;
-  }
-
-  &:not(:last-child) {
-    border-bottom: 1px solid #678fa8;
-  }
-
-  &:last-child {
-    box-shadow: inset 0 -2px 5px #6d97b1;
-  }
+.site-list .site-list__item--logo {
+  border: none;
 }
 
 .site-list__item a {
@@ -136,16 +138,20 @@
   }
 }
 
-.page-header__logo {
+.site-list__item .page-header__logo {
   position: absolute;
-  bottom: -27px;
+  bottom: -28px;
   left: 50%;
   z-index: 1;
 
   width: 102px;
-  height: 83px;
+  height: 84px;
+  padding: 0;
 
   background-image: url("../img/logotype-mobile.svg");
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+
   transform: translateX(-50%);
 }
 
@@ -190,7 +196,7 @@
     content: "";
 
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: -1px;
 
     width: 320px;
@@ -246,15 +252,11 @@
     .list-style (0, 0, none);
   }
 
-  .site-list li {
-    background-color: #ffffff;
-  }
-
-  .site-list__item-button {
-    display: none;
-  }
-
   .site-list__item {
+    width: 153px;
+
+    background-color: #ffffff;
+
     &:not(:first-child) {
       border: none;
     }
@@ -268,6 +270,10 @@
     }
   }
 
+  .site-list__item-button {
+    display: none;
+  }
+
   .site-list__item a {
     padding: 15px 20px 15px 20px;
 
@@ -277,6 +283,7 @@
     text-decoration: none;
 
     color: #000000;
+
     background-color: #ffffff;
 
     border: none;
@@ -290,6 +297,7 @@
 
     &:active {
       color: rgba(0, 0, 0, 0.3);
+      background-color: #ffffff;
     }
   }
 
@@ -297,12 +305,12 @@
     display: none;
   }
 
-  .page-header__logo {
+  .site-list__item .page-header__logo {
     position: absolute;
     top: 0;
 
-    background-image: url("../img/logotype-tablet.svg");
-    background-repeat: no-repeat;
+    background-color: transparent;
+    background-image: url("../img/logotype-tablet.png");
   }
 
   .page-header__main-image {
@@ -372,8 +380,16 @@
     .desktop-page-style;
   }
 
-  .page-header__logo {
-    width: 188px;
+  .site-list__item a {
+    padding: 15px 20px 15px 20px;
+  }
+
+  .site-list__item {
+    width: 239px;
+  }
+
+  .site-list__item .page-header__logo {
+    width: 187px;
     height: 96px;
 
     background-image: url("../img/logotype-desktop.svg");
