@@ -291,25 +291,57 @@
 /* ---------- Планшетная версия ---------- */
 
 @media (min-width: @tablet-width) {
+  .feedback {
+    padding-top: 74px;
+  }
+
   .page-form {
     width: 648px;
   }
 
   .feedback__title {
+    padding-bottom: 31px;
+
     font-size: 30px;
   }
 
   .feedback__description {
-    padding: 0 15% 19px 16%;
+    padding: 0 15% 58px 16%;
+
+    transform: translateX(-4px); /* Pixelperfect */
   }
 
   .form {
+    display: flex;
+    flex-wrap: wrap-reverse;
+
     border-top: none;
   }
 
-  .form__fieldset--name-info,
+  .form__fieldset--name,
   .form__fieldset--impression {
     width: 50%;
+    margin: 0;
+  }
+
+  .form__fieldset--name {
+    order: 2;
+  }
+
+  .form__fieldset--impression {
+    order: 1;
+  }
+
+  .form__fieldset--contact-info {
+    order: -1;
+  }
+
+  .form__fieldset-sights {
+    order: -2;
+  }
+
+  .form__fieldset--emotions {
+    order: -3;
   }
 
   .form__fieldset--contact-info,
@@ -321,6 +353,8 @@
   .form__legend {
     position: relative;
 
+    margin-bottom: 56px;
+
     font-size: 21px;
   }
 
@@ -330,6 +364,22 @@
     display: flex;
     align-items: center;
     width: 100%;
+  }
+
+  .form__legend--name {
+    padding-right: 39px;
+  }
+
+  .filter-radio-legend {
+    text-align: left;
+    padding-left: 3px;
+  }
+
+  .form__legend--contact {
+    padding-top: 41px;
+    margin-bottom: 21px;
+
+    transform: translateX(2px);
   }
 
   .form__legend--contact::before,
@@ -365,6 +415,23 @@
     width: 100%;
   }
 
+  .form__item-name {
+    padding-top: 1px;
+  }
+
+  .form__item--contacts:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  .form__item-name label {
+    margin-top: 3px;
+    margin-left: 58px;
+  }
+
+  .form__input-name {
+    padding: 15px 16px 14px 22px;
+  }
+
   .form__filter--sights {
     display: flex;
     flex-wrap: wrap;
@@ -386,7 +453,7 @@
     width: 229px;
 
     &:not(:last-child) {
-      margin-bottom: 43px;
+      margin-bottom: 52px;
     }
 
     &:last-child {
@@ -396,6 +463,10 @@
 
   .form__fieldset--emotions textarea {
     width: 100%;
+  }
+
+  .form__button {
+    order: -4;
   }
 }
 

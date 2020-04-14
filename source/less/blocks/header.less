@@ -15,7 +15,7 @@
   .list-style (0, 1px 0 56px 0, none);
 }
 
-.site-list li {
+.site-list__item {
   background-color: @bg-blue;
 }
 
@@ -78,6 +78,10 @@
   }
 }
 
+.site-list .site-list__item--logo {
+  border: none;
+}
+
 .site-list__item a {
   display: block;
   padding: 8px 0 6px 0;
@@ -136,16 +140,20 @@
   }
 }
 
-.page-header__logo {
+.site-list__item .page-header__logo {
   position: absolute;
-  bottom: -27px;
+  bottom: -28px;
   left: 50%;
   z-index: 1;
 
   width: 102px;
-  height: 83px;
+  height: 84px;
+  padding: 0;
 
   background-image: url("../img/logotype-mobile.svg");
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+
   transform: translateX(-50%);
 }
 
@@ -246,7 +254,9 @@
     .list-style (0, 0, none);
   }
 
-  .site-list li {
+  .site-list__item {
+    width: 153px;
+
     background-color: #ffffff;
   }
 
@@ -277,6 +287,7 @@
     text-decoration: none;
 
     color: #000000;
+
     background-color: #ffffff;
 
     border: none;
@@ -290,6 +301,7 @@
 
     &:active {
       color: rgba(0, 0, 0, 0.3);
+      background-color: #ffffff;
     }
   }
 
@@ -297,12 +309,12 @@
     display: none;
   }
 
-  .page-header__logo {
+  .site-list__item .page-header__logo {
     position: absolute;
     top: 0;
 
-    background-image: url("../img/logotype-tablet.svg");
-    background-repeat: no-repeat;
+    background-color: transparent;
+    background-image: url("../img/logotype-tablet.png");
   }
 
   .page-header__main-image {
@@ -372,8 +384,16 @@
     .desktop-page-style;
   }
 
-  .page-header__logo {
-    width: 188px;
+  .site-list__item a {
+    padding: 15px 20px 15px 20px;
+  }
+
+  .site-list__item {
+    width: 239px;
+  }
+
+  .site-list__item .page-header__logo {
+    width: 187px;
     height: 96px;
 
     background-image: url("../img/logotype-desktop.svg");
