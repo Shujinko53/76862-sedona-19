@@ -567,8 +567,16 @@
     width: 960px;
   }
 
+  .feedback {
+    padding-top: 112px;
+}
+
   .feedback__description {
-    padding: 0 26% 19px 27%;
+    padding: 0 26% 43px 27%;
+  }
+
+  .form__fieldset-sights {
+    padding-bottom: 16px;
   }
 
   .form__filter--sights {
@@ -576,15 +584,68 @@
     width: 100%;
   }
 
-  .filter-list__option {
-    width: 205px;
+  .form__contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-    &:not(:last-child) {
-      margin-bottom: 43px;
-    }
+  .filter-radio-legend {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 41px;
+  }
 
-    &:last-child {
-      margin-bottom: 20px;
+  .filter-list__option-checkbox label {
+    padding-left: 82px;
+  }
+
+  .form__legend--name {
+    padding-right: 151px;
+  }
+
+  .form__legend--contact {
+    margin-bottom: 73px;
+  }
+
+  .form__item--contacts {
+    display: flex;
+    align-items: center;
+    width: 50%;
+
+    & input {
+      width: 315px;
     }
   }
+
+  .form__item--contacts:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .filter-list__option:not(:last-child) {
+    margin-bottom: 51px;
+  }
+
+  .form__item-name label {
+    margin-top: 0;
+    margin-left: 80px;
+  }
+
+  .filter-list__input--radio + label{
+    padding-left: 80px;
+  }
+
+  .filter-list__input--radio + label::before {
+    left: 4px;
+    border-radius: 50%;
+  }
+
+  .filter-list__input--radio:checked + label::after {
+    top: 1px;
+    left: 21px;
+  }
+
+  .form__button {
+    width: 480px;
+  }
+
 }
