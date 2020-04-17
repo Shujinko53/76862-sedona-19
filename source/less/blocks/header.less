@@ -138,7 +138,7 @@
   }
 }
 
-.site-list__item--logo .page-header__logo {
+.page-header__logo {
   position: absolute;
   bottom: -28px;
   left: 50%;
@@ -284,8 +284,6 @@
 
     color: #000000;
 
-    background-color: #ffffff;
-
     border: none;
   }
 
@@ -299,17 +297,22 @@
       color: rgba(0, 0, 0, 0.3);
       background-color: #ffffff;
     }
+
+    .site-list__item a:not([href]) {
+      &:hover {
+      background-color: transparent;
+      }
+    }
   }
 
   .main-nav__toggle {
     display: none;
   }
 
-  .site-list__item--logo .page-header__logo {
+  .page-header__logo {
     position: absolute;
     top: 0;
 
-    background-color: transparent;
     background-image: url("../img/logotype-tablet.png");
   }
 
@@ -388,7 +391,7 @@
     width: 239px;
   }
 
-  .site-list__item--logo .page-header__logo {
+   .page-header__logo {
     width: 187px;
     height: 96px;
 
