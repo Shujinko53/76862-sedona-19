@@ -14,11 +14,13 @@
 }
 
 .modal__success {
+  display: block;
+
   transform: translate(-50%, -550%);
 }
 
 .modal__failure {
-  transform: translate(-50%, -750%);
+  transform: translate(-50%, -550%);
 }
 
 .modal__block {
@@ -38,6 +40,10 @@
 .modal__title {
   margin: 0;
   margin-bottom: 25px;
+}
+
+.failure-title-break {
+  display: none;
 }
 
 .modal__description {
@@ -79,4 +85,78 @@
 
 .modal-show {
   display: block;
+}
+
+/* ---------- Планшетная версия ---------- */
+
+@media (min-width: @tablet-width) {
+  .modal__success {
+    width: 640px;
+  }
+
+  .modal__failure {
+    width: 400px;
+  }
+
+  .modal__block {
+    padding: 0 17%;
+  }
+
+  .modal__success-block {
+    margin-bottom: 34px;
+    padding-top: 62px;
+  }
+
+  .modal__failure-block {
+    margin-bottom: 33px;
+    padding: 55px 14% 0 14%;
+  }
+
+  .modal__failure-block .modal__title {
+    margin-bottom: 24px;
+
+    line-height: 40px;
+  }
+
+  .modal__title {
+    margin-bottom: 31px;
+
+    font-size: 30px;
+  }
+
+  .failure-title-break {
+    display: block;
+  }
+
+  .success-description-break {
+    display: none;
+  }
+
+  .modal__success-close {
+    width: 100%;
+    padding: 44px 91px;
+
+    box-sizing: border-box;
+  }
+
+  .modal__failure-close {
+    padding-bottom: 49px;
+  }
+
+  .modal__button {
+    font-size: 21px;
+  }
+
+  .modal__success-button {
+    width: 458px;
+  }
+
+  .modal__failure-button {
+    width: 272px;
+  }
+}
+
+/* ---------- Десктопная версия ---------- */
+
+@media (min-width: @desktop-width) {
 }
