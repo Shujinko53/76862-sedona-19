@@ -484,8 +484,8 @@
     }
 
     &:nth-child(2) label {
-      padding-left: 77px;
-      padding-right: 9px;
+      padding-left: 79px;
+      padding-right: 8px;
     }
   }
 
@@ -588,6 +588,8 @@
   .form__contact-wrapper {
     display: flex;
     flex-wrap: wrap;
+
+    justify-content: space-between;
   }
 
   .filter-radio-legend {
@@ -611,10 +613,25 @@
   .form__item--contacts {
     display: flex;
     align-items: center;
-    width: 50%;
 
     & input {
       width: 315px;
+    }
+
+    &:first-child {
+      width: 400px;
+
+      & label {
+        margin-right: 14px;
+      }
+    }
+
+    &:last-child {
+      width: 480px;
+
+      & label {
+        margin-right: 16px;
+      }
     }
   }
 
@@ -629,6 +646,28 @@
   .form__item-name label {
     margin-top: 0;
     margin-left: 80px;
+  }
+
+  .form__item--contacts label {
+    display: block;
+    margin-left: 0;
+    margin-bottom: -1px;
+  }
+
+  .contact-phone {
+    display: none;
+  }
+
+  .form__input-phone {
+    padding: 16px 65px 16px 21px;
+  }
+
+  .icon-phone::before {
+    background-position: 19px;
+  }
+
+  .form__input-email {
+    padding: 16px 65px 16px 23px;
   }
 
   .filter-list__input--radio + label {
