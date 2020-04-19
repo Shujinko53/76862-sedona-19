@@ -21,6 +21,10 @@
   color: #333333;
 }
 
+.search-break {
+  display: none;
+}
+
 .search__link {
   .button;
 }
@@ -33,6 +37,7 @@
   background-color: rgb(235, 230, 217);
   border: none;
 }
+
 /* ---------- Планшетная версия ---------- */
 
 @media (min-width: @tablet-width) {
@@ -48,6 +53,10 @@
 
   .search__description {
     padding: 0 0 42px 0;
+  }
+
+  .search-break {
+    display: block;
   }
 
   .search__map iframe {

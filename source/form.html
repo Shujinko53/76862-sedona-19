@@ -18,7 +18,7 @@
             </button>
           </li>
           <li class="site-list__item"><a href="photo.html">Фото и видео</a></li>
-          <li class="site-list__item site-list__item--logo"><a class="page-header__logo" href="index.html"></a></li>
+          <li class="site-list__item site-list__item--logo"><a class="page-header__logo" href="index.html" style="background-color: transparent;"></a></li>
           <li class="site-list__item"><a>Форма отзыва</a></li>
           <li class="site-list__item"><a href="https://htmlacademy.ru">HTML academy</a></li>
         </ul>
@@ -64,11 +64,11 @@
             <legend class="form__legend form__legend--contact">Контактная информация:</legend>
             <div class="form__contact-wrapper">
               <p class="form__item form__item--contacts form__item--contacts-icon icon-phone">
-                <label for="phonenumber">Контактный телефон*:</label>
-                <input class="form__input" type="text" id="phonenumber" name="phone_number" placeholder="Введите телефон" required>
+                <label for="phonenumber"><span class="contact-phone">Контактный</span> телефон*:</label>
+                <input class="form__input form__input-phone" type="text" id="phonenumber" name="phone_number" placeholder="Введите телефон" required>
               <p class="form__item form__item--contacts form__item--contacts-icon icon-email">
                 <label for="email">Электронная почта*:</label>
-                <input class="form__input" type="email" id="email" name="email" placeholder="Введите e-mail" required>
+                <input class="form__input form__input-email" type="email" id="email" name="email" placeholder="Введите e-mail" required>
               </p>
             </div>
 
@@ -165,7 +165,7 @@
     <section class="modal modal__success">
       <div class="modal__block modal__success-block">
       <h4 class="modal__title">Ваш отзыв отправлен!</h4>
-      <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br>
+      <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br class="success-description-break">
         В ближайшее время мы опубликуем его на сайте.</p>
       </div>
       <div class="modal__success-close">
@@ -175,7 +175,7 @@
 
     <section class="modal modal__failure">
       <div class="modal__block modal__failure-block">
-        <h4 class="modal__title">Что-то пошло не так!</h4>
+        <h4 class="modal__title">Что-то пошло<br class="failure-title-break"> не так!</h4>
         <p class="modal__description">Проверьте поля,
           выделенные красным, скорее всего вы забыли их заполнить</p>
       </div>
