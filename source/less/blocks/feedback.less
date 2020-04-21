@@ -57,7 +57,7 @@
 }
 
 .form__legend {
-  margin-bottom: 21px;
+  margin: 0 auto 21px;
   padding: 16px 0 0 0;
 
   font-weight: 700;
@@ -155,7 +155,8 @@
   background-repeat: no-repeat;
 
   border: none;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 
   outline: none;
 
@@ -171,6 +172,14 @@
 }
 
 .form__input::placeholder {
+  color: #000000;
+}
+
+input[type="text"]:-ms-input-placeholder {
+  color: #000000;
+}
+
+input[type="text"]::-ms-input-placeholder {
   color: #000000;
 }
 
@@ -369,6 +378,8 @@
       height: 293px;
 
       background-color: #dbdbdb;
+
+      -moz-transform: translate(2px, -97px);
     }
   }
 
@@ -422,8 +433,10 @@
   }
 
   .filter-radio-legend {
+    -moz-margin-start: inherit;
+    margin-right: 48px;
+
     text-align: left;
-    padding-left: 3px;
   }
 
   .form__legend--contact {
@@ -437,6 +450,8 @@
     margin-bottom: 47px;
     padding-top: 28px;
     padding-left: 10px;
+
+    text-align: center;
   }
 
   .filter-emotions-legend {
@@ -451,8 +466,13 @@
   .filter-emotions-legend::after {
     content: "";
 
-    flex-grow: 1;
-    flex-shrink: 0;
+    -webkit-box-flex: 1;
+
+        -ms-flex-positive: 1;
+
+            flex-grow: 1;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
 
     width: 50px;
     height: 1px;
@@ -594,8 +614,11 @@
 
   .filter-radio-legend {
     text-align: center;
+    -moz-margin-end: auto;
+    -moz-margin-start: auto;
     padding-left: 0;
     padding-right: 41px;
+
   }
 
   .form label,
