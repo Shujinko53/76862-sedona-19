@@ -93,11 +93,11 @@
 }
 
 .site-list__item a[href] {
-  &:hover {
+  &:not(.page-header__logo):hover {
     background-color: @bg-blue-hover;
   }
 
-  &:active {
+  &:not(.page-header__logo):active {
     color: rgba(255, 255, 255, 0.3);
     background-color: @bg-blue-active;
   }
@@ -288,12 +288,12 @@
   }
 
   .site-list__item a[href] {
-    &:hover {
+    &:not(.page-header__logo):hover {
       color: @bg-blue;
       background-color: #ffffff;
     }
 
-    &:active {
+    &:not(.page-header__logo):active {
       color: rgba(0, 0, 0, 0.3);
       background-color: #ffffff;
     }
@@ -391,7 +391,12 @@
     width: 187px;
     height: 96px;
 
+    background-color: transparent;
     background-image: url("../img/logotype-desktop.svg");
+
+    &:hover {
+      background-color: transparent;
+    }
   }
 
   .page-header__main-image {
