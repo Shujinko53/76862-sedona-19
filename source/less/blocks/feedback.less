@@ -155,8 +155,6 @@
   background-repeat: no-repeat;
 
   border: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 
   outline: none;
 
@@ -379,6 +377,7 @@ input[type="text"]::-ms-input-placeholder {
 
       background-color: #dbdbdb;
 
+      transform: translate(0, 0);
       -moz-transform: translate(2px, -97px);
     }
   }
@@ -467,12 +466,10 @@ input[type="text"]::-ms-input-placeholder {
     content: "";
 
     -webkit-box-flex: 1;
-
-        -ms-flex-positive: 1;
-
-            flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
     -ms-flex-negative: 0;
-        flex-shrink: 0;
+    flex-shrink: 0;
 
     width: 50px;
     height: 1px;
@@ -618,7 +615,6 @@ input[type="text"]::-ms-input-placeholder {
     -moz-margin-start: auto;
     padding-left: 0;
     padding-right: 41px;
-
   }
 
   .form label,
