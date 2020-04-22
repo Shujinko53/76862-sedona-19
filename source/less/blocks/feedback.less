@@ -150,7 +150,7 @@
 .form__input {
   position: relative;
 
-  width: 100%;
+  width: 280px;
   padding: 16px 60px 16px 20px;
 
   font: inherit;
@@ -177,6 +177,11 @@
 
 .form__input::placeholder {
   color: #000000;
+}
+
+::-moz-placeholder,
+:-moz-placeholder {
+  opacity: 1;
 }
 
 input[type="text"]:-ms-input-placeholder {
@@ -504,16 +509,13 @@ input[type="text"]::-ms-input-placeholder {
     left: 16px;
   }
 
+  .form__input-phone,
+  .form__input-email {
+    width: 648px;
+  }
+
   .form__input-name {
     padding: 15px 16px 14px 22px;
-  }
-
-  .icon-phone::before {
-    background-position: 23px;
-  }
-
-  .icon-email::before {
-    background-position: 23px 21px;
   }
 
   .form__fieldset--emotions textarea {
@@ -665,6 +667,11 @@ input[type="text"]::-ms-input-placeholder {
 
   .contact-phone {
     display: none;
+  }
+
+  .form__input-phone,
+  .form__input-email {
+    width: 315px;
   }
 
   .form__input-phone {
