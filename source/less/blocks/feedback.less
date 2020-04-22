@@ -316,13 +316,13 @@ input[type="text"]::-ms-input-placeholder {
 /* ---------- Планшетная версия ---------- */
 
 @media (min-width: @tablet-width) {
+  .page-form {
+    width: 648px;
+  }
+
   .feedback {
     width: 648px;
     padding-top: 74px;
-  }
-
-  .page-form {
-    width: 648px;
   }
 
   .feedback__title {
@@ -378,7 +378,7 @@ input[type="text"]::-ms-input-placeholder {
   .form__fieldset--contact-info,
   .form__fieldset-sights,
   .form__fieldset--emotions {
-    width: 100%;
+    width: 648px;
 
     border-top: 1px solid #dbdbdb;
   }
@@ -573,6 +573,12 @@ input[type="text"]::-ms-input-placeholder {
 
   .form__fieldset--impression {
     width: 480px;
+  }
+
+  .form__fieldset--contact-info,
+  .form__fieldset-sights,
+  .form__fieldset--emotions {
+    width: 960px;
   }
 
   .form__fieldset-sights {

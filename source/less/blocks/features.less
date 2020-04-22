@@ -83,6 +83,10 @@
 /* ---------- Планшетная версия ---------- */
 
 @media (min-width: @tablet-width) {
+  .features {
+    width: 768px;
+  }
+
   .features__list-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -109,25 +113,36 @@
 
   .features__item-content {
     width: 256px;
-    padding: 45px 42px 10px 42px;
+    padding-top: 45px;
 
     box-sizing: border-box;
+  }
+
+  .features__item--blue-first {
+    padding-right: 43px;
+    padding-left: 43px;
   }
 
   .features__item--blue-second {
-    width: 256px;
-    padding: 45px 30px 30px 30px;
-
-    box-sizing: border-box;
+    padding-right: 43px;
+    padding-left: 43px;
   }
 
   .features__title {
+    padding-right: 0;
+    padding-left: 0;
+
     font-size: 21px;
   }
 
-  .features__title--blue {
-    padding-right: 10px;
-    padding-left: 10px;
+  .features__item--blue-second .features__title--blue {
+    padding-right: 9px;
+    padding-left: 9px;
+  }
+
+  .features__item--grey:nth-child(3) .features__title--grey {
+    padding-right: 8px;
+    padding-left: 8px;
   }
 
   .features__number {
@@ -162,28 +177,37 @@
 /* ---------- Десктопная версия ---------- */
 
 @media (min-width: @desktop-width) {
+  .features {
+    width: 1200px;
+  }
+
   .features__item-content {
     width: 400px;
-    padding: 52px 55px;
+    padding-top: 53px;
+  }
+
+  .features__item--blue-first {
+    padding-right: 55px;
+    padding-left: 55px;
   }
 
   .features__item--blue-second {
-    padding-right: 73px;
-    padding-left: 73px;
+    padding-right: 82px;
+    padding-left: 82px;
+  }
+
+  .features__item--blue-first .features__title--blue {
+    padding-right: 35px;
+    padding-left: 35px;
   }
 
   .features__item--blue-second .features__title--blue {
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: 42px;
+    padding-left: 42px;
   }
 
   .features__image {
     width: 800px;
-  }
-
-  .features__title--blue {
-    padding-right: 40px;
-    padding-left: 41px;
   }
 
   .features__item--grey {
@@ -192,6 +216,11 @@
   }
 
   .features__title--grey {
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+
+  .features__item--grey:nth-child(3) .features__title--grey {
     padding-right: 80px;
     padding-left: 80px;
   }
