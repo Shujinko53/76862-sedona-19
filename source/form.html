@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>HTML Academy: Седона - форма отзыва</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -18,7 +19,7 @@
             </button>
           </li>
           <li class="site-list__item"><a href="photo.html">Фото и видео</a></li>
-          <li class="site-list__item site-list__item--logo"><a class="page-header__logo" href="index.html" style="background-color: transparent"></a></li>
+          <li class="site-list__item site-list__item--logo"><a class="page-header__logo" href="index.html" title="Перейти на главную старницу"></a></li>
           <li class="site-list__item"><a>Форма отзыва</a></li>
           <li class="site-list__item"><a href="https://htmlacademy.ru">HTML academy</a></li>
         </ul>
@@ -65,7 +66,7 @@
             <div class="form__contact-wrapper">
               <p class="form__item form__item--contacts form__item--contacts-icon icon-phone">
                 <label for="phonenumber"><span class="contact-phone">Контактный</span> телефон*:</label>
-                <input class="form__input form__input-phone" type="text" id="phonenumber" name="phone_number" placeholder="Введите телефон" inputmode="tel" required>
+                <input class="form__input form__input-phone" type="tel" id="phonenumber" name="phone_number" placeholder="Введите телефон" inputmode="tel" required>
               <p class="form__item form__item--contacts form__item--contacts-icon icon-email">
                 <label for="email">Электронная почта*:</label>
                 <input class="form__input form__input-email" type="email" id="email" name="email" placeholder="Введите e-mail" inputmode="email" required>
