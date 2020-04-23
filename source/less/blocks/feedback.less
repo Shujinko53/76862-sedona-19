@@ -1,4 +1,6 @@
 .feedback {
+  width: 320px;
+  margin: 0 auto;
   padding-top: 39px;
 
   font-kerning: none; /* Pixelperfect */
@@ -151,6 +153,7 @@
   position: relative;
 
   width: 280px;
+  margin: 0;
   padding: 16px 60px 16px 20px;
 
   font: inherit;
@@ -483,6 +486,10 @@ input[type="text"]::-ms-input-placeholder {
 
   .form__item-name {
     padding-top: 1px;
+
+    &:not(:last-child) {
+      margin-bottom: 22px;
+    }
   }
 
   .form__item--contacts:not(:last-child) {
@@ -512,6 +519,10 @@ input[type="text"]::-ms-input-placeholder {
   .form__input-phone,
   .form__input-email {
     width: 648px;
+  }
+
+  .icon-email::before {
+    background-position: 19px 21px;
   }
 
   .form__input-name {
@@ -626,7 +637,7 @@ input[type="text"]::-ms-input-placeholder {
     align-items: center;
 
     & input {
-      width: 315px;
+      width: 309px;
     }
 
     &:first-child {
@@ -684,6 +695,10 @@ input[type="text"]::-ms-input-placeholder {
 
   .form__input-email {
     padding: 16px 65px 16px 23px;
+  }
+
+  .icon-email::before {
+    background-position: 23px 21px;
   }
 
   .filter-list__input--radio + label {
