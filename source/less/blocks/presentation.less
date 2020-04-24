@@ -26,13 +26,12 @@
 }
 
 .presentation__video {
+  position: relative;
+
   margin: 0;
 
   width: 321px;
   height: 201px;
-
-  // background-image: url("../img/video-mobile.jpg");
-  background-repeat: no-repeat;
 }
 
 .video {
@@ -41,10 +40,13 @@
 }
 
 .range-filter {
+  position: absolute;
+  bottom: -66px;
+  left: 50%;
+
   width: 280px;
-  margin-top: -45px;
-  margin-left: auto;
-  margin-right: auto;
+
+  transform: translateX(-140px);
 }
 
 .range-controls {
@@ -172,8 +174,9 @@
   }
 
   .range-filter {
-    position: absolute;
     bottom: 0;
+    left: 0;
+    transform: translateX(0);
 
     width: 648px;
     height: 93px;
