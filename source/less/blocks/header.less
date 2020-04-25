@@ -93,11 +93,11 @@
 }
 
 .site-list__item a[href] {
-  &:hover {
+  &:not(.page-header__logo):hover {
     background-color: @bg-blue-hover;
   }
 
-  &:active {
+  &:not(.page-header__logo):active {
     color: rgba(255, 255, 255, 0.3);
     background-color: @bg-blue-active;
   }
@@ -170,7 +170,7 @@
     content: "";
 
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: -1px;
 
     width: 320px;
@@ -225,7 +225,7 @@
   height: 39px;
 }
 
-.main-nav--closed .site-list__item {
+.main-nav--closed .site-list__item:not(.site-list__item--logo) {
   display: none;
 }
 
@@ -242,6 +242,10 @@
 @media (min-width: @tablet-width) {
   .main-nav {
     .tablet-page-style;
+  }
+
+  .main-nav--closed .site-list__item:not(.site-list__item--logo) {
+    display: block;
   }
 
   .main-nav__list {
@@ -275,7 +279,7 @@
   }
 
   .site-list__item a {
-    padding: 15px 20px 15px 20px;
+    padding: 15px 16px 15px 16px;
 
     font-size: 14px;
     line-height: 26px;
@@ -288,12 +292,12 @@
   }
 
   .site-list__item a[href] {
-    &:hover {
+    &:not(.page-header__logo):hover {
       color: @bg-blue;
       background-color: #ffffff;
     }
 
-    &:active {
+    &:not(.page-header__logo):active {
       color: rgba(0, 0, 0, 0.3);
       background-color: #ffffff;
     }
@@ -391,7 +395,12 @@
     width: 187px;
     height: 96px;
 
+    background-color: transparent;
     background-image: url("../img/logotype-desktop.svg");
+
+    &:hover {
+      background-color: transparent;
+    }
   }
 
   .page-header__main-image {
@@ -404,6 +413,7 @@
       content: "";
 
       position: absolute;
+      bottom: -1px;
       left: 0;
 
       width: 1200px;

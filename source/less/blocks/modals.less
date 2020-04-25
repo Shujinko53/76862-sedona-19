@@ -5,8 +5,6 @@
   left: 50%;
   z-index: 5;
 
-  display: none;
-
   font-kerning: none; /* Pixelperfect */
 
   background-color: #ffffff;
@@ -14,13 +12,11 @@
 }
 
 .modal__success {
-  display: block;
-
-  transform: translate(-50%, -550%);
+  transform: translate(-50%, -700%);
 }
 
 .modal__failure {
-  transform: translate(-50%, -550%);
+  transform: translate(-50%, -800%);
 }
 
 .modal__block {
@@ -83,13 +79,22 @@
   width: 180px;
 }
 
-.modal-show {
+.modal__open {
   display: block;
+}
+
+.modal__close {
+  display: none;
 }
 
 /* ---------- Планшетная версия ---------- */
 
 @media (min-width: @tablet-width) {
+  .modal__success,
+  .modal__failure {
+    transform: translate(-50%, -550%);
+  }
+
   .modal__success {
     width: 640px;
   }
@@ -124,12 +129,9 @@
     font-size: 30px;
   }
 
-  .failure-title-break {
-    display: block;
-  }
-
-  .success-description-break {
-    display: none;
+  .modal__title-failure {
+    padding-right: 20px;
+    padding-left: 20px;
   }
 
   .modal__success-close {
@@ -158,5 +160,9 @@
 
 /* ---------- Десктопная версия ---------- */
 
-// @media (min-width: @desktop-width) {
-// }
+@media (min-width: @desktop-width) {
+  .modal__success,
+  .modal__failure {
+    transform: translate(-50%, -500%);
+  }
+}
