@@ -1,3 +1,8 @@
+.search {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .search-wrapper {
   padding: 25px 20px 23px 20px;
 
@@ -34,13 +39,17 @@
 }
 
 .search__map iframe {
-  background-color: rgb(235, 230, 217);
+  background-image: url("../img/bg-map-mobile.jpg");
   border: none;
 }
 
 /* ---------- Планшетная версия ---------- */
 
 @media (min-width: @tablet-width) {
+  .search {
+    width: 768px;
+  }
+
   .search-wrapper {
     padding: 55px 20.1% 58px 20.1%;
   }
@@ -61,17 +70,39 @@
 
   .search__map iframe {
     height: 350px;
+
+    background-image: url("../img/bg-map-tablet.jpg");
+  }
+
+  .search__link {
+    width: 459px;
+
+    box-sizing: border-box;
   }
 }
 
 /* ---------- Десктопная версия ---------- */
 
 @media (min-width: @desktop-width) {
+  .search {
+    width: 1200px;
+  }
+
   .search-wrapper {
     padding: 55px 31% 65px 31%;
   }
 
   .search__description {
     padding: 0 0 47px 0;
+  }
+
+  .search__link {
+    width: 457px;
+  }
+
+  .search__map iframe {
+    height: 350px;
+
+    background-image: url("../img/bg-map-desktop.jpg");
   }
 }
