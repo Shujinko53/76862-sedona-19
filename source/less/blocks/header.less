@@ -225,7 +225,7 @@
   height: 39px;
 }
 
-.main-nav--closed .site-list__item {
+.main-nav--closed .site-list__item:not(.site-list__item--logo) {
   display: none;
 }
 
@@ -242,6 +242,10 @@
 @media (min-width: @tablet-width) {
   .main-nav {
     .tablet-page-style;
+  }
+
+  .main-nav--closed .site-list__item:not(.site-list__item--logo) {
+    display: block;
   }
 
   .main-nav__list {
