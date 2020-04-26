@@ -24,5 +24,5 @@ window.addEventListener('keydown', function (evt) {
 });
 
 formSubmitButton.addEventListener('click', function() {
-  modal.classList.add('.modal__open');
+  modal.classList.add('modal__open');
 });
