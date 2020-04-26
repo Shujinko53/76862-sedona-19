@@ -23,8 +23,8 @@ form.addEventListener('submit', function (evt) {
   evt.preventDefault();
 
   if (!form.checkValidity()) {
+    form.setAttribute("novalidate", true);
     modalFailure.classList.remove('modal__close');
-    modalFailure.classList.add('modal__open');
   } else {
     modalSuccess.classList.remove('modal__close');
     // form.submit();
