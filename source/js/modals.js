@@ -1,27 +1,40 @@
 let modal = document.querySelector('.modal');
+let modalSuccess = document.querySelector('.modal__success');
 let modalFailure = document.querySelector('.modal__failure');
-let modalClosed = document.querySelector('.modal__close');
-let modalCloseButton = document.querySelector('.modal__button');
-let modalFailCloseButtom = document.querySelector('.modal__failure-button');
-let formSubmitButton = document.querySelector('.form__button');
+let modalClosed = modal.querySelector('.modal__close');
+let modalCloseButton = modal.querySelector('.modal__button');
+let modalFailCloseButtom = modalFailure.querySelector('.modal__failure-button');
+
+let form = document.querySelector('.form');
+let inputField = form.querySelector('.form__input');
+let submitButton = document.querySelector('.form__button');
 
 let closeHandler = function (evt) {
   evt.preventDefault();
-  modal.classList.remove('modal__open');
+  modalSuccess.classList.remove('modal__open');
   modalFailure.classList.remove('modal__open');
-  modal.classList.add('modal__close');
+  modalSuccess.classList.add('modal__close');
   modalFailure.classList.add('modal__close');
 };
 
 modalCloseButton.addEventListener('click', closeHandler);
 modalFailCloseButtom.addEventListener('click', closeHandler);
 
-window.addEventListener('keydown', function (evt) {
-  if (evt.keyCode === 27 && document.querySelector('.modal__open')) {
-      closeHandler(evt);
-    }
+form.addEventListener('submit', function (evt) {
+  evt.preventDefault();
+
+  if (!inputField.validity.valid) {
+    modalFailure.classList.remove('modal__close');
+    modalFailure.classList.add('modal__open');
+  } else {
+    modalSuccess.classList.remove('modal__close');
+    // form.submit();
+    form.reset();
+  }
 });
 
-formSubmitButton.addEventListener('click', function() {
-  modal.classList.add('modal__open');
+window.addEventListener('keydown', function (evt) {
+  if (evt.keyCode === 27 && !modal.classList.contains('.modal__close')) {
+      closeHandler(evt);
+    }
 });
