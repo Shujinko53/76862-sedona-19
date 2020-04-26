@@ -41,6 +41,10 @@
 .search__map iframe {
   background-image: url("../img/bg-map-mobile.jpg");
   border: none;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-map-mobile@2x.jpg");
+  }
 }
 
 /* ---------- Планшетная версия ---------- */
@@ -72,6 +76,10 @@
     height: 350px;
 
     background-image: url("../img/bg-map-tablet.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-tablet@2x.jpg");
+    }
   }
 
   .search__link {
@@ -104,5 +112,9 @@
     height: 350px;
 
     background-image: url("../img/bg-map-desktop.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-desktop@2x.jpg");
+    }
   }
 }
