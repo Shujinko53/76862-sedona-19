@@ -22,6 +22,8 @@ modalFailCloseButtom.addEventListener('click', closeHandler);
 form.addEventListener('submit', function (evt) {
   evt.preventDefault();
 
+  form.removeAttribute('novalidate');
+
   if (!form.checkValidity()) {
     form.setAttribute("novalidate", true);
     modalFailure.classList.remove('modal__close');
