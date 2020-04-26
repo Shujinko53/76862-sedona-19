@@ -1,7 +1,6 @@
 let modal = document.querySelector('.modal');
 let modalFailure = document.querySelector('.modal__failure');
 let modalClosed = document.querySelector('.modal__close');
-let modalOpened = document.querySelector('.modal__open');
 let modalCloseButton = document.querySelector('.modal__button');
 let modalFailCloseButtom = document.querySelector('.modal__failure-button');
 let formSubmitButton = document.querySelector('.form__button');
@@ -24,5 +23,5 @@ window.addEventListener('keydown', function (evt) {
 });
 
 formSubmitButton.addEventListener('click', function() {
-  modal.classList.add('.modal__open');
+  modal.classList.add('modal__open');
 });
