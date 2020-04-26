@@ -6,7 +6,6 @@ let modalCloseButton = modal.querySelector('.modal__button');
 let modalFailCloseButtom = modalFailure.querySelector('.modal__failure-button');
 
 let form = document.querySelector('.form');
-let inputField = form.querySelector('.form__input');
 let submitButton = document.querySelector('.form__button');
 
 let closeHandler = function (evt) {
@@ -23,7 +22,7 @@ modalFailCloseButtom.addEventListener('click', closeHandler);
 form.addEventListener('submit', function (evt) {
   evt.preventDefault();
 
-  if (!inputField.validity.valid) {
+  if (!form.checkValidity()) {
     modalFailure.classList.remove('modal__close');
     modalFailure.classList.add('modal__open');
   } else {
