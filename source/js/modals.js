@@ -18,11 +18,9 @@ modalCloseButton.addEventListener('click', closeHandler);
 modalFailCloseButtom.addEventListener('click', closeHandler);
 
 window.addEventListener('keydown', function (evt) {
-  if (evt.keyCode === 27) {
-    if (modal.classList.contains('modal__open') || modalFailure.classList.contains('modal__open')) {
+  if (evt.keyCode === 27 && document.querySelector('.modal__open')) {
       closeHandler(evt);
     }
-  }
 });
 
 formSubmitButton.addEventListener('click', function() {
