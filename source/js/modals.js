@@ -47,6 +47,7 @@ form.addEventListener('submit', function (evt) {
     modalSuccess.classList.remove('modal__close');
     // form.submit();
     form.reset();
+    form.setAttribute("novalidate", true);
   }
 });
 
