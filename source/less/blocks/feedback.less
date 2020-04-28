@@ -335,6 +335,11 @@ input[type="text"]::-ms-input-placeholder {
   display: none;
 }
 
+.form__invalid .form__input:invalid {
+  outline: 2px solid #e74246;
+  box-shadow: 0 2px 5px 0 #e74246;
+}
+
 /* ---------- Планшетная версия ---------- */
 
 @media (min-width: @tablet-width) {
@@ -654,7 +659,7 @@ input[type="text"]::-ms-input-placeholder {
     align-items: center;
 
     & input {
-      width: 309px;
+      width: 316px;
     }
 
     &:first-child {
@@ -672,6 +677,10 @@ input[type="text"]::-ms-input-placeholder {
         margin-right: 16px;
       }
     }
+  }
+
+  .form__item--contacts-icon::before {
+    right: 1px;
   }
 
   .form__item--contacts:not(:last-child) {
