@@ -19,7 +19,13 @@
             </button>
           </li>
           <li class="site-list__item"><a href="photo.html">Фото и видео</a></li>
-          <li class="site-list__item site-list__item--logo"><a class="page-header__logo"></a></li>
+          <li class="site-list__item site-list__item--logo"><a>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logotype-tablet.png">
+              <img class="page-header__logo" src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип Седоны">
+            </picture></a>
+          </li>
           <li class="site-list__item"><a href="form.html">Форма отзыва</a></li>
           <li class="site-list__item"><a href="https://htmlacademy.ru">HTML academy</a></li>
         </ul>

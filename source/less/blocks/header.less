@@ -103,6 +103,10 @@
   }
 }
 
+.site-list__item--logo a {
+  padding: 0;
+}
+
 .main-nav__toggle {
   position: absolute;
   bottom: 18px;
@@ -140,17 +144,13 @@
 
 .page-header__logo {
   position: absolute;
-  bottom: -42px;
-  left: 50.5%;
+  bottom: -28px;
+  left: 50%;
   z-index: 1;
 
   width: 102px;
   height: 84px;
   padding: 0;
-
-  background-image: url("../img/logotype-mobile.svg");
-  background-position: 50% 0;
-  background-repeat: no-repeat;
 
   transform: translateX(-50%);
 }
@@ -323,8 +323,6 @@
   .page-header__logo {
     top: 0;
     left: 50%;
-
-    background-image: url("../img/logotype-tablet.png");
   }
 
   .page-header__main-image {
@@ -413,13 +411,10 @@
   }
 
   .page-header__logo {
-    left: 50%;
-
     width: 187px;
     height: 96px;
 
     background-color: transparent;
-    background-image: url("../img/logotype-desktop.svg");
 
     &:hover {
       background-color: transparent;
