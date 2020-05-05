@@ -269,6 +269,10 @@
     .list-style (0, 0, none);
   }
 
+  .site-list__item-button {
+    display: none;
+  }
+
   .site-list__item {
     width: 153px;
 
@@ -285,10 +289,6 @@
     &:last-child {
       box-shadow: none;
     }
-  }
-
-  .site-list__item-button {
-    display: none;
   }
 
   .site-list__item a {
@@ -313,6 +313,18 @@
     &:not(.page-header__logo):active {
       color: rgba(0, 0, 0, 0.3);
       background-color: #ffffff;
+    }
+  }
+
+  .site-list__item--current a[href] {
+    color: #766357;
+
+    &:not(.site-list__item):hover {
+      color: #604e43;
+    }
+
+    &:not(.site-list__item):active {
+      color: rgba(118, 99, 87, 0.3);
     }
   }
 
