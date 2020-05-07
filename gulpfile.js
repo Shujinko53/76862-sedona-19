@@ -4,10 +4,10 @@ var gulp = require("gulp");
 var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
 var less = require("gulp-less");
-// var rename = require("gulp-rename");
+var rename = require("gulp-rename");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
-// var csso = require("gulp-csso");
+var csso = require("gulp-csso");
 var server = require("browser-sync").create();
 var imagemin = require("gulp-imagemin");
 var posthtml = require("gulp-posthtml");
@@ -20,8 +20,8 @@ gulp.task("css", function () {
     .pipe(sourcemap.init())
     .pipe(less())
     .pipe(postcss([ autoprefixer() ]))
-    // .pipe(csso())
-    // .pipe(rename("style.min.css"))
+    .pipe(csso())
+    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
@@ -47,7 +47,7 @@ gulp.task("images", function () {
     imagemin.mozjpeg({progressive: true}),
     imagemin.svgo()
   ]))
-  .pipe(gulp.dest("build/img"));
+  .pipe(gulp.dest("source/img"));
 });
 
 gulp.task("html", function () {
@@ -62,8 +62,7 @@ gulp.task("copy", function () {
   return gulp.src([
       "source/fonts/**/*.{woff,woff2}",
       "source/img/**",
-      "source/js/**",
-      "source/*.ico"
+      "source/js/**"
   ], {
       base: "source"
   })
@@ -73,6 +72,11 @@ gulp.task("copy", function () {
 gulp.task("clean", function () {
   return del("build");
 })
+
+gulp.task("refresh", function (done) {
+  server.reload();
+  done();
+});
 
 gulp.task("build", gulp.series("clean", "copy", "css", "html"));
 gulp.task("start", gulp.series("build", "server"));
