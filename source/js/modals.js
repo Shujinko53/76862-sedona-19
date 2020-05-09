@@ -20,7 +20,7 @@ modalCloseButton.addEventListener('click', closeHandler);
 modalFailCloseButtom.addEventListener('click', closeHandler);
 
 // Временное отключение валидации
-form.setAttribute("novalidate", true);
+form.setAttribute('novalidate', true);
 
 form.addEventListener('submit', function (evt) {
   evt.preventDefault();
@@ -47,7 +47,7 @@ form.addEventListener('submit', function (evt) {
     modalSuccess.classList.remove('modal__close');
     // form.submit();
     form.reset();
-    form.setAttribute("novalidate", true);
+    form.setAttribute('novalidate', true);
   }
 });
 
