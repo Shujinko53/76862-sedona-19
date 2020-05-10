@@ -31,7 +31,9 @@
   }
 }
 
-.site-list__item-button {
+// Состояние переключателя при открытом меню
+
+.main-nav--opened .main-nav__toggle {
   position: absolute;
   top: 16px;
   right: 19px;
@@ -41,7 +43,6 @@
   width: 23px;
   height: 22px;
 
-  font-size: 0;
   background-color: transparent;
 
   border: none;
@@ -76,38 +77,9 @@
   }
 }
 
-.site-list .site-list__item--logo {
-  border: none;
-}
+// Состояние переключателя при закрытом меню
 
-.site-list__item a {
-  display: block;
-  padding: 8px 0 6px 0;
-
-  font-size: 18px;
-  line-height: 40px;
-  font-weight: bold;
-
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.site-list__item a[href] {
-  &:not(.page-header__logo):hover {
-    background-color: @bg-blue-hover;
-  }
-
-  &:not(.page-header__logo):active {
-    color: rgba(255, 255, 255, 0.3);
-    background-color: @bg-blue-active;
-  }
-}
-
-.site-list__item--logo a {
-  padding: 0;
-}
-
-.main-nav__toggle {
+.main-nav--closed .main-nav__toggle {
   position: absolute;
   bottom: 18px;
   right: 20px;
@@ -140,6 +112,37 @@
     background-color: @bg-blue;
     box-shadow: 0 9px 0 0 @bg-blue, 0 18px 0 0 @bg-blue;
   }
+}
+
+.site-list .site-list__item--logo {
+  border: none;
+}
+
+.site-list__item a {
+  display: block;
+  padding: 8px 0 6px 0;
+
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: bold;
+
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.site-list__item a[href] {
+  &:not(.page-header__logo):hover {
+    background-color: @bg-blue-hover;
+  }
+
+  &:not(.page-header__logo):active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: @bg-blue-active;
+  }
+}
+
+.site-list__item--logo a {
+  padding: 0;
 }
 
 .page-header__logo {
@@ -242,11 +245,9 @@
   display: block;
 }
 
-.main-nav--nojs .main-nav {
-  display: block;
-}
+// Состояние переключателя при выключенном js
 
-.main-nav--nojs .site-list__item-button--close-button {
+.main-nav--nojs .main-nav__toggle {
   display: none;
 }
 
@@ -267,10 +268,6 @@
     justify-content: space-between;
 
     .list-style (0, 0, none);
-  }
-
-  .site-list__item-button {
-    display: none;
   }
 
   .site-list__item {
@@ -328,7 +325,7 @@
     }
   }
 
-  .main-nav__toggle {
+  .main-nav--closed .main-nav__toggle {
     display: none;
   }
 
