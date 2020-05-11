@@ -1,0 +1,139 @@
+.main-nav {
+  .mobile-page-style;
+  position: relative;
+}
+
+.main-nav__list {
+  position: relative;
+
+  .list-style (0, 1px 0 56px 0, none);
+}
+
+// Состояние переключателя при открытом меню
+
+.main-nav--opened .main-nav__toggle {
+  position: absolute;
+  top: 16px;
+  right: 19px;
+  z-index: 2;
+
+  display: block;
+  width: 23px;
+  height: 22px;
+
+  background-color: transparent;
+
+  border: none;
+
+  outline: none;
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 10px;
+    left: -3px;
+
+    width: 27px;
+    height: 4px;
+
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+// Состояние переключателя при закрытом меню
+
+.main-nav--closed .main-nav__toggle {
+  position: absolute;
+  bottom: 18px;
+  right: 20px;
+  z-index: 2;
+
+  display: block;
+  width: 23px;
+  height: 21px;
+
+  background-color: #ffffff;
+
+  border: none;
+
+  outline: none;
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 23px;
+    height: 4px;
+
+    background-color: @bg-blue;
+    box-shadow: 0 9px 0 0 @bg-blue, 0 18px 0 0 @bg-blue;
+  }
+}
+
+.main-nav--closed .site-list__item:not(.site-list__item--logo) {
+  display: none;
+}
+
+.main-nav--opened .site-list__item {
+  display: block;
+}
+
+// Состояние переключателя при выключенном js
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+/* ----- Планшетная версия ----- */
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    .tablet-page-style;
+  }
+
+  .main-nav--closed .site-list__item:not(.site-list__item--logo) {
+    display: block;
+  }
+
+  .main-nav--closed .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .list-style (0, 0, none);
+  }
+}
+
+/* ----- Десктопная версия ----- */
+
+@media (min-width: @desktop-width) {
+.main-nav {
+    .desktop-page-style;
+  }
+}
