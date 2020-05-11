@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>HTML Academy: Седона - форма отзыва</title>
+    <link rel="preload" href="fonts/ptsans.woff">
+    <link rel="preload" href="fonts/ptsansbold.woff">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
@@ -14,9 +16,6 @@
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
             <a href="index.html">Главная</a>
-            <button class="site-list__item-button site-list__item-button--close-button">
-              <span class="visually-hidden">Закрыть меню</span>
-            </button>
           </li>
           <li class="site-list__item"><a href="photo.html">Фото и видео</a></li>
           <li class="site-list__item site-list__item--logo"><a href="index.html" title="Перейти на главную старницу">
@@ -30,11 +29,11 @@
           <li class="site-list__item"><a href="https://htmlacademy.ru">HTML academy</a></li>
         </ul>
         <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
+          <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
       </nav>
       <div class="page-header__inner-image">
-        <img class="text-image" src="img/sedona.svg"
+        <img class="page-header__text-image" src="img/sedona.svg"
         width="230" height="40" alt="Надпись Седона">
       </div>
 
@@ -70,10 +69,10 @@
           <fieldset class="form__fieldset form__fieldset--contact-info">
             <legend class="form__legend form__legend--contact">Контактная информация:</legend>
             <div class="form__contact-wrapper">
-              <p class="form__item form__item--contacts form__item--contacts-icon icon-phone">
+              <p class="form__item form__item--contacts form__item--contacts-icon form__item--icon-phone">
                 <label for="phonenumber"><span class="contact-phone">Контактный</span> телефон*:</label>
                 <input class="form__input form__input-phone" type="tel" id="phonenumber" name="phone_number" placeholder="Введите телефон" inputmode="tel" pattern="[0-9]{11,15}" required>
-              <p class="form__item form__item--contacts form__item--contacts-icon icon-email">
+              <p class="form__item form__item--contacts form__item--contacts-icon form__item--icon-email">
                 <label for="email">Электронная почта*:</label>
                 <input class="form__input form__input-email" type="email" id="email" name="email" placeholder="Введите e-mail" inputmode="email" required>
               </p>
@@ -82,7 +81,7 @@
           </fieldset>
 
           <fieldset class="form__fieldset form__fieldset--impression">
-            <legend class="form__legend filter-radio-legend">Ваше общее впечатление:</legend>
+            <legend class="form__legend form__legend--impression">Ваше общее впечатление:</legend>
             <ul class="form__filter filter-list">
               <li class="filter-list__option filter-list__option-radio">
                 <input class="visually-hidden filter-list__input filter-list__input--radio" type="radio" id="rather_positive" value="positive" name="impression_choice" checked>
@@ -99,7 +98,7 @@
             </ul>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset-sights">
-            <legend class="form__legend filter-checkbox-legend">Посещенные<br> достопримечательности:</legend>
+            <legend class="form__legend form__legend--sights">Посещенные<br> достопримечательности:</legend>
               <ul class="form__filter filter-list form__filter--sights">
                 <li class="filter-list__option filter-list__option-checkbox">
                   <input class="visually-hidden filter-list__input filter-list__input--checkbox" type="checkbox" id="devil_bridge" value="devil_bridge" name="visit_sights" checked>
@@ -121,7 +120,7 @@
           </fieldset>
 
           <fieldset class="form__fieldset form__fieldset--emotions">
-            <legend class="form__legend filter-emotions-legend">Опишите свои эмоции:</legend>
+            <legend class="form__legend form__legend--emotions">Опишите свои эмоции:</legend>
             <textarea name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
           <div class="form__end">
@@ -134,7 +133,7 @@
 
     </main>
 
-    <footer class="page-footer inner-footer form-footer">
+    <footer class="page-footer page-footer--inner page-footer--form">
 
       <div class="page-footer__visit visit-sedona">
         <p class="visit-sedona__hashtag">#visitsedona</p>
@@ -143,14 +142,14 @@
       <ul class="page-footer__social social-list">
         <li class="social-list__item">
           <a class="social-list__link social-list__link--twitter" href="#" title="Наш аккаунт в Twitter">
-            <svg class="social-icon icon-twitter" xmlns="http://www.w3.org/2000/svg"
+            <svg class="social-list__icon social-list__icon--twitter" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewBox="0 0 17 15">
               <path fill="#FFF" d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"/></svg>
           </a>
         </li>
         <li class="social-list__item">
           <a class="social-list__link social-list__link--facebook" href="#" title="Наш Facebook-аккаунт">
-            <svg class="social-icon icon-facebook" xmlns="http://www.w3.org/2000/svg"
+            <svg class="social-list__icon social-list__icon--facebook" xmlns="http://www.w3.org/2000/svg"
               width="9" height="18" viewBox="0 0 8.672 18.944">
               <path d="M6.275 3.356h2.398V0H5.795C2.656.181 1.54 2.387 1.948 6.114H0v3.518h1.959v9.312h3.837V9.632h2.857V6.114H5.787c-.022-1.045-.037-2.405.488-2.758z"/>
           </svg>
@@ -158,7 +157,7 @@
         </li>
         <li class="social-list__item">
           <a class="social-list__link social-list__link--youtube" href="#" title="Наш YouTube-канал">
-            <svg class="social-icon icon-youtube" xmlns="http://www.w3.org/2000/svg"
+            <svg class="social-list__icon social-list__icon--youtube" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="15" viewBox="0 0 20 16">
               <path fill="#FFF" d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/></svg>
           </a>
@@ -166,7 +165,7 @@
       </ul>
 
       <div class="page-footer__copyright copyright">
-        <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/19" title="Перейти на сайт HTML Academy">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="Перейти на сайт HTML Academy">
           <b class="copyright__link-title">Разработано</b>
           <svg class="copyright__link-image"  width="27" height="34" xmlns="http://www.w3.org/2000/svg" viewBox="10 10 40 40"><path d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
         </a>
@@ -174,25 +173,25 @@
 
     </footer>
 
-    <section class="modal modal__success modal__close">
-      <div class="modal__block modal__success-block">
+    <section class="modal modal--success modal--close">
+      <div class="modal__block modal__block--success">
       <h3 class="modal__title">Ваш отзыв отправлен!</h3>
       <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br>
         В ближайшее время мы опубликуем его на сайте.</p>
       </div>
       <div class="modal__success-close">
-        <button class="modal__button modal__success-button">Закрыть окно</button>
+        <button class="modal__button modal__button--success">Закрыть окно</button>
       </div>
     </section>
 
-    <section class="modal modal__failure modal__close">
-      <div class="modal__block modal__failure-block">
-        <h3 class="modal__title modal__title-failure">Что-то пошло не так!</h3>
+    <section class="modal modal--failure modal--close">
+      <div class="modal__block modal__block--failure">
+        <h3 class="modal__title modal__title--failure">Что-то пошло не так!</h3>
         <p class="modal__description">Проверьте поля,
           выделенные красным, скорее всего вы забыли их заполнить</p>
       </div>
       <div class="modal__failure-close">
-        <button class="modal__button modal__failure-button">ок</button>
+        <button class="modal__button modal__button--failure">ок</button>
       </div>
     </section>
 

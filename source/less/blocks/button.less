@@ -1,0 +1,29 @@
+.button {
+  display: block;
+  padding: 16px 20px;
+
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  font-family: inherit;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+
+  background-color: @bg-blue;
+
+  outline: none;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: @bg-blue-hover;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: @bg-blue-active;
+  }
+}

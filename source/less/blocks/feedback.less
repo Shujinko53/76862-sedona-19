@@ -10,7 +10,7 @@
   margin: 0;
   padding-bottom: 26px;
 
-  font-weight: 700;
+  font-weight: bold;
   font-size: 18px;
 }
 
@@ -66,7 +66,7 @@
   margin: 0 auto 21px;
   padding: 16px 0 0 0;
 
-  font-weight: 700;
+  font-weight: bold;
 }
 
 .form__legend--name {
@@ -83,19 +83,19 @@
   transform: translateX(-3px); /* Pixelperfect */
 }
 
-.filter-radio-legend {
+.form__legend--impression {
   padding-bottom: 17px;
 
   text-align: center;
 }
 
-.filter-checkbox-legend {
+.form__legend--sights {
   padding-bottom: 10px;
 
   text-align: center;
 }
 
-.filter-emotions-legend {
+.form__legend--emotions {
   margin-bottom: 17px;
   padding-top: 14px;
 }
@@ -139,12 +139,12 @@
   background-repeat: no-repeat;
 }
 
-.icon-phone::before {
+.form__item--icon-phone::before {
   background-image: url("../img/icon-phone.svg");
   background-position: 19px;
 }
 
-.icon-email::before {
+.form__item--icon-email::before {
   background-image: url("../img/icon-mail.svg");
   background-position: 19px 20px;
 }
@@ -170,7 +170,7 @@
   padding: 16px 60px 16px 20px;
 
   font: inherit;
-  font-weight: 700;
+  font-weight: bold;
 
   background-color: #f2f2f2;
   background-repeat: no-repeat;
@@ -187,7 +187,9 @@
   &:focus,
   &:active {
     background-color: #ffffff;
+
     outline: 3px solid #e5e5e5;
+    outline-offset: -3px;
   }
 }
 
@@ -221,7 +223,7 @@ input[type="text"]::-ms-input-placeholder {
 }
 
 .form__filter label {
-  font-weight: 700;
+  font-weight: bold;
   text-transform: none;
 }
 
@@ -335,7 +337,7 @@ input[type="text"]::-ms-input-placeholder {
   padding: 16px 18px 13px 21px;
 
   font: inherit;
-  font-weight: 700;
+  font-weight: bold;
   color: #000000;
 
   background-color: #f2f2f2;
@@ -345,7 +347,7 @@ input[type="text"]::-ms-input-placeholder {
   transform: translateX(-3px);
 
   &::placeholder {
-    font-weight: 700;
+    font-weight: bold;
     color: #000000;
   }
 }
@@ -363,8 +365,10 @@ input[type="text"]::-ms-input-placeholder {
 }
 
 .form__invalid .form__input:invalid {
+  box-shadow: 0 1px 5px 0 #e74246;
+
   outline: 2px solid #e74246;
-  box-shadow: 0 2px 5px 0 #e74246;
+  outline-offset: -2px;
 }
 
 /* ---------- Планшетная версия ---------- */
@@ -474,8 +478,8 @@ input[type="text"]::-ms-input-placeholder {
   }
 
   .form__legend--contact,
-  .filter-checkbox-legend,
-  .filter-emotions-legend {
+  .form__legend--sights,
+  .form__legend--emotions {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -489,7 +493,7 @@ input[type="text"]::-ms-input-placeholder {
     padding-right: 39px;
   }
 
-  .filter-radio-legend {
+  .form__legend--impression {
     padding-right: 48px;
 
     text-align: center;
@@ -502,14 +506,12 @@ input[type="text"]::-ms-input-placeholder {
     transform: translateX(-1px); /* Pixelperfect */
   }
 
-  .filter-checkbox-legend {
+  .form__legend--sights {
     margin-bottom: 58px;
   }
 
-  .filter-emotions-legend {
+  .form__legend--emotions {
     padding: 0 75px;
-
-    transform: none;
   }
 
   .filter-list__option-radio:not(:last-child) {
@@ -574,11 +576,11 @@ input[type="text"]::-ms-input-placeholder {
     width: 644px;
   }
 
-  .icon-phone::before {
+  .form__item--icon-phone::before {
     background-position: 23px;
   }
 
-  .icon-email::before {
+  .form__item--icon-email::before {
     background-position: 23px 21px;
   }
 
@@ -667,7 +669,7 @@ input[type="text"]::-ms-input-placeholder {
     justify-content: space-between;
   }
 
-  .filter-radio-legend {
+  .form__legend--impression {
     padding-right: 41px;
   }
 
@@ -689,7 +691,7 @@ input[type="text"]::-ms-input-placeholder {
     margin-bottom: 75px;
   }
 
-  .filter-emotions-legend {
+  .form__legend--emotions {
     transform: translateX(-3px); /* Pixelperfect */
   }
 
@@ -754,7 +756,7 @@ input[type="text"]::-ms-input-placeholder {
     padding: 16px 65px 16px 21px;
   }
 
-  .icon-phone::before {
+  .form__item--icon-phone::before {
     background-position: 19px;
   }
 
@@ -762,7 +764,7 @@ input[type="text"]::-ms-input-placeholder {
     padding: 16px 65px 16px 23px;
   }
 
-  .icon-email::before {
+  .form__item--icon-email::before {
     background-position: 23px 21px;
   }
 

@@ -1,0 +1,68 @@
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-list__link {
+  position: relative;
+
+  display: block;
+  width: 46px;
+  height: 48px;
+
+  background-color: #81b3d2;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+
+    .social-list__icon {
+      opacity: 0.3;
+    }
+  }
+}
+
+.social-list__icon {
+  position: absolute;
+
+  fill: #ffffff;
+}
+
+.social-list__icon--twitter {
+  top: 16px;
+  left: 14.5px;
+}
+
+.social-list__icon--facebook {
+  top: 14px;
+  left: 18px;
+}
+
+.social-list__icon--youtube {
+  top: 16px;
+  left: 13px;
+}
+
+/* ---------- Планшетная версия ---------- */
+
+@media (min-width: @tablet-width) {
+  .social-list {
+    transform: translateX(-3px); /* Pixelperfect */
+  }
+}
+
+/* ---------- Десктопная версия ---------- */
+
+// @media (min-width: @desktop-width) {
+
+// }
