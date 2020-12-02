@@ -78,5 +78,6 @@ gulp.task("refresh", function (done) {
   done();
 });
 
+gulp.task("clean", gulp.series("clean"));
 gulp.task("build", gulp.series("clean", "copy", "css", "html"));
 gulp.task("start", gulp.series("build", "server"));
